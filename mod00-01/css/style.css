@@ -1,12 +1,12 @@
 body {
 	background-color: #a2c0f2;
-	background: url("../img/bg.jpg") no-repeat;
+	background: url("../img/bg.jpg") no-repeat; 
     background-size: cover;
     background-attachment: fixed;
     color: white;
-
 	font-family: 'Merriweather Sans', sans-serif;
     text-shadow: 1px 1px black;
+    background-position: center;
 }
 
 h1{
@@ -21,6 +21,8 @@ h1{
 h2{
 	color: white;
 	text-shadow: 1px 1px black;
+	margin-top: 0;
+	font-size: 20px;
 }
 
 p{
@@ -44,7 +46,6 @@ p{
 }
 
 .container{
-
 	width: 600px;
 	margin: 0 auto;
 	text-align: center;
