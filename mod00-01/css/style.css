@@ -1,0 +1,51 @@
+body {
+	background-color: #a2c0f2;
+	background: url("../img/bg.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+
+	font-family: 'Merriweather Sans', sans-serif;
+    text-shadow: 1px 1px black;
+}
+
+h1{
+	font-size: 50px;
+	font-family: 'Dancing Script', cursive;
+	margin-bottom: 0;
+	margin-top: 0;
+	letter-spacing: 5px;
+
+}
+
+h2{
+	color: white;
+	text-shadow: 1px 1px black;
+}
+
+p{
+	font-size: 20px;
+	text-shadow: 1px 1px black;
+}
+
+#me{
+	border-color: white;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 5px;
+	border-color: rgba(255, 255, 255, 0.7);
+	margin-top: 20%;
+	margin-bottom: 0%;
+
+}
+
+.about{
+	width: 100%;
+}
+
+.container{
+
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
