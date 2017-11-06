@@ -1,0 +1,64 @@
+* {
+	font-size: 30px;
+} 
+
+.wrapper {
+	width: 80%;
+	margin: 0 auto; /*will center wrapper*/
+	border: 2px solid #000;
+	padding: 20px;
+}
+
+/* :link (unvisited link) */
+a:link {
+	color: #008000; /* from blue to green */
+}
+
+a:visited {
+	color: #006666; /* from violet to light blue */
+}
+
+a:hover {
+	background-color: orange;
+    color: #FF00FF;
+}
+
+a:focus {
+    color: #FF0;
+}
+
+hr{
+	border-color: red;
+ }
+
+.wrapper:hover{
+ 	background-color: lightblue;
+
+ }
+
+p,
+#test, 
+.spans,
+.box p {
+	color: #99004d;
+}
+
+a[target="_blank"] {
+	background-color: yellow;
+}
+
+div + p {
+	background-color: lightgreen;
+}
+
+div ~ p {
+	background-color: orange;
+}
+
+div > p {
+	background-color: red;
+}
+
+div#dog > p {
+	background-color: green;
+}
