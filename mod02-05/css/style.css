@@ -23,6 +23,11 @@ a:hover {
     color: #FF00FF;
 }
 
+main > a:hover:before {
+	font-size: 40px;
+	content: 'ADD';
+}
+
 a:focus {
     color: #FF0;
 }
@@ -47,18 +52,19 @@ a[target="_blank"] {
 	background-color: yellow;
 }
 
-div + p {
-	background-color: lightgreen;
-}
 
 div ~ p {
 	background-color: orange;
 }
 
-div > p {
+div > p { /*children*/
 	background-color: red;
 }
 
-div#dog > p {
+div#dog > p { /*specificity children*/
 	background-color: green;
+}
+
+div + p {
+	background-color: lightgreen;
 }
