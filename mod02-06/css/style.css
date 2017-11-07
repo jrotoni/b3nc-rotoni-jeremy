@@ -1,0 +1,62 @@
+/*css reset*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper
+/*div.wrapper > div*/ {
+	border: 1px solid blue;
+	width: 70%;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+div.wrapper > div,
+div.wrapper > div > div {
+	border: 2px solid #5d6063;
+	background-color: skyblue;
+	padding: 20px;
+	text-align: center;
+	border-radius: 5px;
+
+}
+
+h1,
+p {
+	background-color: #dde0e3;
+
+}
+
+/*from inline type to block type element*/
+em,
+strong {
+	background-color: #b2d6ff;
+	display: inline-block;
+}
+
+/*h1 {
+}*/
+
+h1 {
+	/*
+	* applying padding to specific sides of box model*
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+	padding-left: 40px;*/
+	padding: 50px;
+	border: 1px solid red;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+strong {
+	/*padding: 50px;*/
+	/*margin: 50px;*/
+}
+
+p {
+	padding: 20px;
+	margin: 20px;
+}
