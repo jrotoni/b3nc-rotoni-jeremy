@@ -35,4 +35,17 @@ alert(s);
 
 ```php
 echo ("this is a php line");
-```
+```  
+
+## Emoji  
+
+:monkey:  
+:star2:  
+:speech_baloon:  
+:zap:  
+:v:    
+
+## Tables  
+| firstname| lastname |
+|:---------|:---------|
+| jeremy   | rotoni   |
