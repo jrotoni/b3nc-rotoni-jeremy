@@ -1,0 +1,61 @@
+/** {
+	margin: 0;
+	padding: 0;
+}*/ /*auto-reset*/ 
+
+h1 {
+	background-color: grey;
+	margin: 0;
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+p {
+	background-color: #efefef;
+	height: 1000px; /*for creating scrol bar*/
+	position: relative;
+	top: 70px;
+	left: 70px;
+	z-index: 0; /*default z-index value*/
+}
+
+/*
+ *
+ *
+ * CSS Z-Index Property 
+ *
+ *
+ */
+
+ div {
+ 	width: 100px;
+ 	height: 100px;
+ 	border: 1px solid black;
+ 	position: absolute;
+
+ }
+
+ .blue {
+ 	background-color: blue;
+ 	top: 20px;
+ 	left: 20px;
+ 	z-index: 2;
+ }
+
+ .yellow {
+ 	background-color: yellow;
+ 	top: 40px;
+ 	left: 40px;
+ 	z-index: 1;
+ }
+
+ .orange {
+ 	background-color: orange; 
+ 	top: 60px;
+ 	left: 60px;
+ 	z-index: 0;
+ }
