@@ -1,10 +1,15 @@
 * {
 	margin: 0;
 	padding: 0;
+	background-color: black;
+
 }
 
+body {
+		background-image: url("../background.jpg");
+}
 hr {
-	border: 5px solid red;
+	border: 1px solid red;
 }
 
 .container {
@@ -12,6 +17,7 @@ hr {
 	width: 700px;
 	height: 0 auto;
 	padding: 10px;
+	position: relative;
 }
 
 .firstboxes {
@@ -41,7 +47,7 @@ hr {
 }
 
 .secondborder {
-	border: 1px solid white;
+	border: 1px solid red;
 	height: 150px;
 	width: 150px;
 	padding-top: 10px;
@@ -118,6 +124,7 @@ textarea {
 	float: right;
 	position: relative;
 	bottom: 50px;
+	resize: none;
 }
 
 .fourthform {
@@ -126,4 +133,230 @@ textarea {
 	right: -550px;*/
 	float: right;
 	bottom: 45px;
+}
+
+.lsix {
+	width: 7%;
+	float: left;
+}
+
+.sixavatar {
+	width: 50px;
+	height: 50px;
+	background-color: grey;
+	margin-right: 10px;
+	float: left;
+	margin-bottom: 100px;
+}
+
+.rsix {
+	width: 91%;
+	color: white;
+	float: right;
+	/*clear: both;*/
+	/*position: absolute;*/
+}
+
+.replies {
+	/*height: 91%;*/
+	/*width: 91%;*/
+/*	padding-top: 200px;*/
+	padding-left: 5px;
+/*	margin-left: 55px;*/
+	border-left: 1px solid white;
+	/*float: left;*/
+	position: relative;
+}
+
+.secondcomment .thirdcomment {
+	/*position: absolute;*/
+	/*float: left;*/
+	display: inline;
+}
+
+.parasix {
+	text-align: left;
+	font-size: 10px;
+	font-style: italic;
+	margin-bottom: 10px;
+	/*position: absolute;*/
+}
+
+.headsix {
+	margin-bottom: 10px;
+}
+
+.secondcomment .sixavatar {
+	margin-bottom: 15px;
+}
+
+.linksix {
+	font-size: 10px;
+	display: inline-block;
+	/*margin-bottom: 20px;*/
+}
+
+#seven {
+	width: 500px;
+}
+
+.lseven {
+	width: 40%;
+	float: left;
+}
+
+.rseven {
+	width: 59%;
+	float: right;
+}
+
+.rseven h3 {
+	color: white;
+}
+
+.rseven p {
+	color: grey;
+}
+.sevenbox {
+	height: 100px;
+	background-color: grey;
+}
+
+#eight {
+	width: 500px;
+}
+.leight {
+	width: 59%;
+	float: left;
+}
+
+.reight {
+	width: 40%;
+	float: right;
+}
+
+.leight h3 {
+	color: red;
+}
+
+.leight p {
+	color: grey;
+}
+.eightbox {
+	height: 100px;
+	width: 100%;
+	background-color: grey;
+}
+
+.lnine {
+	width: 30%;
+	float: left;
+}
+
+.lnine h3 {
+	color: red;
+	margin: 10px;
+} 
+
+.lnine p {
+	color: white;
+	margin: 10px;
+}
+
+.rnine {
+	width: 69%;
+	float: right;
+}
+
+.ninebox {
+	width: 150px;
+	height: 150px;
+	background-color: grey;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	float: right;
+	position: relative;
+}
+
+#ten {
+	width: 1000px;
+}
+
+.lten {
+	width: 60%;
+	height: 0 auto;
+	float: left;
+}
+
+.rten {
+	width: 40%;
+	height: 0 auto;
+	float: right;
+}
+
+.tenborder {
+	border: 1px solid red;
+	padding: 5px;
+	margin: 10px;
+	width: 150px;
+	/*height: 150px;*/
+	float: left;
+}
+
+.tenbox {
+	background-color: grey;
+	width: 100%;
+	height: 95px;
+	/*position: relative;*/
+	/*float: left;*/
+}
+
+.tenborder p {
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+.rtenbox {
+	width: 100%;
+	height: 200px;
+	background-color: grey;
+}
+
+.tenmenu {
+	padding: 20px;
+	padding-left: 0;
+}
+.tenmenu span{
+	color: white;
+	background-color: grey;
+	margin: 5px;
+}
+
+.baguiobox {
+	background-color: grey;
+	width: 150px;
+	height: 100px;
+	margin-right: 5px;
+	float: left;
+}
+
+.baguio h2 {
+	color: red;
+}
+
+.baguio p {
+	color: white;
+	font-style: italic;
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+
+.container {
+	border: 2px solid red;
+	margin: 3% auto;
+}
+
+button {
+	background-color: white;
 }
