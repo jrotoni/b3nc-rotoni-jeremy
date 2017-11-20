@@ -12,10 +12,11 @@ hr {
 	border: 1px solid red;
 }
 
+
+
 .container {
 	background-color: black;
 	width: 700px;
-	height: 0 auto;
 	padding: 10px;
 	position: relative;
 }
@@ -47,7 +48,7 @@ hr {
 }
 
 .secondborder {
-	border: 1px solid red;
+	border: 3px dashed #E20B0B;
 	height: 150px;
 	width: 150px;
 	padding-top: 10px;
@@ -62,6 +63,7 @@ hr {
 }
 
 .secondtext {
+	font-family: 'Special Elite', cursive;
 	color: white;
 	text-align: center;
 	margin-top: 14px;
@@ -84,7 +86,8 @@ hr {
 .thirdheading {
 	margin: 10px;
 	margin-left: 0;
-	color: white;
+	color: red;
+	font-family: 'Nosifer', cursive;
 }
 
 
@@ -107,7 +110,8 @@ hr {
 .fourthheading {
 	margin: 10px;
 	margin-left: 0;
-	color: white;
+	color: red;
+	font-family: 'Nosifer', cursive;
 }
 
 .fifthavatar {
@@ -210,9 +214,6 @@ textarea {
 	float: right;
 }
 
-.rseven h3 {
-	color: white;
-}
 
 .rseven p {
 	color: grey;
@@ -220,6 +221,7 @@ textarea {
 .sevenbox {
 	height: 100px;
 	background-color: grey;
+	/*background-image: url("../valentine.png");*/
 }
 
 #eight {
@@ -237,6 +239,7 @@ textarea {
 
 .leight h3 {
 	color: red;
+	font-family: 'Nosifer', cursive;
 }
 
 .leight p {
@@ -295,7 +298,7 @@ textarea {
 }
 
 .tenborder {
-	border: 1px solid red;
+	border: 3px dashed #E20B0B;
 	padding: 5px;
 	margin: 10px;
 	width: 150px;
@@ -312,6 +315,7 @@ textarea {
 }
 
 .tenborder p {
+	font-family: 'Special Elite', cursive;
 	color: white;
 	text-align: center;
 	padding: 10px;
@@ -353,10 +357,23 @@ textarea {
 }
 
 .container {
-	border: 2px solid red;
+	border: 5px double red;
 	margin: 3% auto;
 }
 
 button {
 	background-color: white;
+}
+
+h3, h2 {
+	color: red;
+	font-family: 'Nosifer', cursive;
+}
+
+img {
+	max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    /*position: absolute;*/
 }

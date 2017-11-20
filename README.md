@@ -15,3 +15,7 @@ Insert picture is <3
 ## 2017-10-26
 ### HTML Forms
 html activity 1 is <3
+
+## 2017-11-15
+#### CSS Floats and Clears
+I really love this activity because it will challenge you to code and it reall measures if you understand the lesson.
