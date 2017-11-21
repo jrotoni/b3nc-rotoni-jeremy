@@ -1,0 +1,32 @@
+.colorfg {
+	color: white; /* any other color */
+}
+
+.colorbg {
+	background-color: darkcyan;
+}
+
+.name {
+	background-color: mediumaquamarine;
+}
+.rgb {
+	background-color: rgb(102, 205, 170); /* rgb = red, green, blue*/
+}
+
+.rgba {
+	/* rgba = red, green, blue, alpha */
+	/* alpha = 0.0 to 1.0 */
+	/* opacity */
+	background-color: rgba(0, 255, 255, 0.5);
+}
+
+.hex {
+	background-color: #66cdaa;
+}
+
+/* hue, saturation, lightness */
+
+.hsl {
+	background-color: hsl(0, 0%, 78%); /* accuracy of color */
+}
+
