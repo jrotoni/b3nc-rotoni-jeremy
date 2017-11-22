@@ -1,0 +1,186 @@
+/* css reset */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: lightgrey;
+}
+
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.wrapper {
+	background-color: #FFF; /* white */
+	width: 80%;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+h3 {
+	padding-bottom: 15px;
+}
+
+.item {
+	margin-bottom: 15px;
+}
+.item1,
+.item2 {
+	background-color: orange;
+	width: 150px;
+	height: 150px;
+	/*margin-bottom: 15px;*/
+}
+
+.item2 {
+	border-left: 18px solid blue;
+	border-right: 18px solid blue;
+}
+
+.item3 {
+	border: 2px solid black;
+	/*width: 150px;*/
+	display: inline-block;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: 10px;
+	/*margin-bottom: 15px;*/
+}
+
+.item4, .item5 {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color: pink;
+	position: relative;
+}
+
+.item5 p {
+	/*text-align: center;*/
+	font-size: 1.2em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.item6, 
+.item7,
+.item8,
+.item11 {
+	border: 2px solid black;
+	width: 650px;
+	height: 400px;
+	position: relative;
+}
+
+.item6 img {
+	width: 20%;
+	position: absolute;
+	bottom: 0;
+}
+
+img[src="img/sun.gif"] {
+	width: 15%;
+	position: absolute;
+}
+
+img[src="img/coconut.jpg"] {
+	width: 15%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.item7,
+.item8 {
+	height: 175px;
+}
+
+
+
+.item8 p {
+	/*text-align: center;*/
+	font-size: 1.2em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+img[src*="dog"]{
+	width: 150px; 
+	border-radius: 50%;
+	opacity: .5;
+}
+
+img[src*="dog"]:hover {
+	width: 150px; 
+	border-radius: 50%;
+	opacity: 1;
+}
+
+.item10 {
+	border: 2px solid black;
+	width: 650px;
+}
+
+.item10 img {
+	float: left;
+}
+
+.item10 p {
+	line-height: 150px;
+
+}
+
+.item11 {
+	height: auto;
+}
+
+.item11 img {
+	width: 10%;
+}
+
+.item11 h2 {
+	font-size: 2.5em;
+}
+
+.item11 * {
+	margin-bottom: 15px;
+}
+
+img[src*="red"]:hover {
+	content: url("../img/sexy.jpg");
+	width: 150px; 
+	border-radius: 50%;
+	opacity: 1;
+}
+
+#lorem {
+	margin-bottom: 0;
+}
+
+.item13 table {
+	border-collapse: collapse;
+}
+
+.item13 td, 
+.item13 th
+  {
+	border: 1px solid black;
+	padding: 10px;
+	text-align: center;
+}
+
+.item13 thead {
+	background-color: black;
+	color: white;
+}
+
