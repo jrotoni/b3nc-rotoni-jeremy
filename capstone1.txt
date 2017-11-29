@@ -1,0 +1,21 @@
+1. 	a. iNurseSP (Nurse Organization)
+	b. Invite new members
+	   Generate traffic thru articles
+2. Who is the audience?
+	a. Primary nurses and/or other IT-related health practicioners
+	b. Ease of registration
+	- read the articles and engage in comments section
+
+/*wireframe.cc/MS5yXB - Landing Page - wireframe.cc/xbQbdz*/
+/*wireframe.cc/AadbSw - News and Updates -wireframe.cc/kB1wQB*/
+/*wireframe.cc/4DGjXb - Careers*/
+/*wireframe.cc/RRnDvc - Membership*/
+/*wireframe.cc/xAsQLT - About Us*/
+/*http://colorpalettes.net/color-palette-3547/*/
+/*tinyurl.com/b3nc-csp1-docs*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}

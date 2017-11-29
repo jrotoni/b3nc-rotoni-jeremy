@@ -11,3 +11,96 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+.nav-wrapper {
+	background-color: #b2ebf2 !important;
+	background: linear-gradient(to bottom, rgba(178, 223, 219, 0) 0%, rgba(77, 182, 172, 0.65) 90%);
+}
+
+/* MAIN */
+main {
+	background: url("https://www.hafkon.nl/files/thumbnails/ziekenhuis-emmen-25159-13.1260x700x1.jpg");
+	background-position: fixed;
+	/*background-repeat: no-repeat;*/
+}
+
+/*.card-content {
+	background-color: rgba(0, 0, 0, 0.1);
+}*/
+
+.card-action a {
+	border: 1px solid white;
+	color: white !important;
+	font-weight: bolder;
+	padding: 8px 25px;
+	border-radius: 15px;
+	background-color: #ffab40;
+}
+
+.card-action a:hover {
+	border: 1px solid #ffab40;
+	padding: 8px 25px;
+	border-radius: 15px;
+	font-weight: bold;
+	background: rgba(0,0,0,0.1);
+	color: #ffab40 !important;
+}
+
+.card-content p {
+	/*padding: 15px 0 !important;*/
+	padding-top: 5px !important;
+	padding-bottom: 15px !important;
+	color: #006064 !important;
+	font-size: 1.1em;
+}
+
+.card-content i {
+	color: #ffab40;
+	font-size: 2.2em;
+}
+
+.shortintro {
+	background: linear-gradient(to right, rgba(178, 223, 219, 0.65) 0%, rgba(255, 255, 255, 1) 70%);
+	color: #006064;
+	padding: 50px;
+}
+
+/* STICKY FOOTER */
+.page-footer {
+	background-color: #006064 !important;
+}
+
+.footer-copyright {
+	background-color: #004d40 !important;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+
+
+@media only screen and (max-width: 400px) {
+
+.nav-wrapper a img {
+	display: block;
+	margin: auto;
+}
+
+}
+
+@media only screen and (min-width: 960px) {
+
+.register {
+	margin: 20px auto;
+	width: 60% !important;
+	float: none !important;
+}
+
+}
