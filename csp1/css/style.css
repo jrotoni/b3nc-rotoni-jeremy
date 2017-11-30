@@ -12,6 +12,12 @@
 	box-sizing: border-box;
 }
 
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
 .nav-wrapper {
 	padding-left: 80px;
 	background-color: #b2ebf2 !important;
@@ -72,6 +78,16 @@ main {
 	font-size: 2.2em;
 }
 
+.modal {
+	/*height: 250px;*/
+	/*width: 10px;*/
+}
+
+#modal1 {
+	top: 25% !important;
+
+}
+
 .shortintro {
 	background: linear-gradient(to right bottom, rgba(178, 223, 219, 0.65) 0%, rgba(255, 255, 255, 1) 80%);
 	color: #006064;
@@ -88,6 +104,26 @@ main {
 /* STICKY FOOTER */
 .page-footer {
 	background-color: #006064 !important;
+}
+
+/*.contacts {
+	text-align: center;
+	width: 70%;
+	margin: 0 auto;
+}
+*/
+.contacts p {
+	/*float: left;*/
+	text-align: center;
+	/*margin: 0 10px;*/
+}
+
+.col ul > li {
+	padding: 2px 0;
+}
+
+.col ul > li > a:hover {
+	color: #ffab40 !important;
 }
 
 .footer-copyright {

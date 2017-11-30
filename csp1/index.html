@@ -48,14 +48,56 @@
 				        
 				        <i class="fa fa-check-square-o" aria-hidden="true"></i> <p style="display: inline-block;"> I am a very simple card. I am good at containing small bits of information.</p>
 				      </div>
+
+				      <!-- MODAL -->
 				      <div class="card-action">
-				        <a href="#" style="margin-right: 0;">Register Now</a>
+				        <a class="waves-effect waves-light modal-trigger" href="#modal1" style="margin-right: 0;">Register Now</a>
+				        <div id="modal1" class="modal">
+				            <div class="modal-content" style="padding: 25px 150px 0 150px;">
+				              <div class="row">
+				                  <form class="col s12">
+				                    <div class="row">
+				                      <div class="input-field col s12">
+				                    	<i class="material-icons prefix">account_circle</i>
+				                        <input id="icon_prefix" type="text" class="validate">
+				                        <label for="icon_prefix">First Name</label>
+				                      </div>
+
+				                      <div class="input-field col s12 right">
+				                        <input id="icon_prefix" type="text" class="validate">
+				                        <label for="icon_prefix">Last Name</label>
+				                      </div>
+
+				                      <div class="input-field col s12">
+				                      <i class="material-icons prefix">phone</i>
+				                        
+				                        <input id="icon_telephone" type="tel" class="validate">
+				                        <label for="icon_telephone">Contact Number</label>
+				                      </div>
+
+				                      <div class="input-field col s12">
+				                      	<i class="material-icons prefix">email</i>
+				                      	
+		                                <input id="email" type="email" class="validate">
+		                                <label for="email" data-error="wrong" data-success="right">Email</label>
+		                              </div>
+				                    </div>
+				                  </form>
+				                </div>
+				            </div>
+
+				            <div class="modal-footer" style="text-align: center;">
+				              <a href="#!" class="modal-action modal-close waves-effect waves-green">Submit</a>
+				            </div>
+				          </div>
 				      </div>
 				    </div>
 				  </div>
 				</div>
 			</div>	
 		</div> <!-- /.container -->
+
+		
 
 		<div class="shortintro">
 			<div class="container flow-text">
@@ -89,8 +131,9 @@
 	      <div class="col l6 s12">
 	        <h5 class="white-text">iNurseSP</h5>
 	        <p class="grey-text text-lighten-4">The Official Philippine Representative to the International Medical Informatics Association - Nursing Informatics Special Interest Group</p>
+
 	      </div>
-	      <div class="col l4 offset-l2 s12">
+	      <div class="col l3 s12">
 	        <h5 class="white-text">Home</h5>
 	        <ul>
 	          <li><a class="grey-text text-lighten-3" href="#!">News and Updates</a></li>
@@ -99,10 +142,24 @@
 	          <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
 	        </ul>
 	      </div>
+
+	      <div class="col l3 s12">
+	      	<h5 class="white-text">Contact Us</h5>
+	      	<ul>
+		        <li><a class="grey-text text-lighten-3" href="https://facebook.com/inursesp" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i> facebook.com/inursesp</a></li>
+		      	<li><a class="grey-text text-lighten-3" href="https://twitter.com/inursesp" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i> twitter.com/inursesp</a></li>
+		      	<li><a class="grey-text text-lighten-3" href="mailto:admin@inursesp.org" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i> admin@inursesp.org</a></li>
+		      	<li><a class="grey-text text-lighten-3" href="https://www.google.com.ph/maps/place/University+of+the+Philippines+College+Of+Medicine/@14.5752782,120.9853995,19z/data=!4m12!1m6!3m5!1s0x3397ca285d4cad0f:0x4e8b222e8f1d7b74!2sUniversity+of+the+Philippines+Manila!8m2!3d14.5758259!4d120.9866145!3m4!1s0x3397ca29ce4e3f73:0xf16cd802f17ccc1a!8m2!3d14.5754299!4d120.9858877" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i> Medical Informatics Unit, College of Medicine, University of the Philippines Manila</a></li>
+	      	</ul>
+	      </div>
+
 	    </div>
 	  </div>
+
 	  <div class="footer-copyright center">
+
 	    <div class="container">
+		  
 	    <small style="letter-spacing: 2px;">&copy; 2017 iNurseSP. All Rights Reserved. Design by <a href="https://web.facebook.com/jeremyrotoni31" target="_blank">jrotoni.</a></small>
 	    <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
 	    </div>
@@ -132,6 +189,17 @@
 		    $('.carousel').carousel('next');
 		    setTimeout(autoplay, 3100);
 		}
+
+		/* MODAL */
+		$(document).ready(function(){
+
+		    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+		    $('.modal').modal({
+		    	dismissible: false
+		    }); 
+		  });
+
+		// $('#modal1').modal('open');
 
 	</script>
 </body>
