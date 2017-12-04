@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	
 	<title>iNurseSP | Informatics Nurses Society of the Philippines</title>
@@ -23,7 +23,8 @@
 	<!-- NAVIGATION -->
 	<nav>
 	    <div class="nav-wrapper">
-	      <a href="http://inursesp.org"><img src="img/logo.png"></a>
+	      <a href="#" data-activates="mobile-demo" class="button-collapse" style="margin-right: 0;"><i class="material-icons">menu</i></a>
+	      <a href="index.html"><img src="img/logo.png"></a>
 	      <ul id="nav-mobile" class="right hide-on-med-and-down">
 	        <li style="background-color: #004d40; width: 90px;"><a class="center" href="index.html">Home</a></li>
 	        <li><a href="news.html">News and Updates</a></li>
@@ -31,26 +32,35 @@
 	        <li><a href="careers.html">Careers</a></li>
 	        <li><a href="aboutus.html">About Us</a></li>
 	      </ul>
+	      <ul id="mobile-demo" class="side-nav">
+	        <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+	        <li><a href="news.html"><i class="fa fa-newspaper-o" aria-hidden="true"></i> News and Updates</a></li>
+	        <li><a href="membership.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Membership</a></li> <!-- userplus -->
+	        <li><a href="careers.html"><i class="fa fa-briefcase" aria-hidden="true"></i> Careers</a></li> <!-- briefcase -->
+	        <li><a href="aboutus.html"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a></li>
+	      </ul>
 	    </div>
 	</nav>
 
 <div class="container" id="factcheck">
 	<div class="row left">
-        <div class="col s12 m6 l12">
+        <div class="col s12 m12 l12">
           <div class="card">
-            <div class="card-content white-text">
+            <div class="card-content">
             	<p><i class="fa fa-check-square-o" aria-hidden="true"></i> I am a very simple card. I am good at containing small bits of information.</p>
             	<p><i class="fa fa-check-square-o" aria-hidden="true"></i> I am a very simple card. I am good at containing small bits of information.</p>
             	<p><i class="fa fa-check-square-o" aria-hidden="true"></i> I am a very simple card. I am good at containing small bits of information.</p>
             	<p><i class="fa fa-check-square-o" aria-hidden="true"></i> I am a very simple card. I am good at containing small bits of information.</p>
             </div>
             <div class="card-action center">
-              <a href="#">Register Now</a>
+              <a href="#carousel" style="margin-right: 0;">Register Now</a>
             </div>
           </div>
         </div>
       </div>
 </div>
+
+<div class="arrow bounce" id="arrowdown"></div>
 	
 
 	<!-- MAIN CONTENT -->
@@ -124,13 +134,13 @@
 
 		<div class="shortintro">
 			<div class="container flow-text">
-				<p>Informatics Nurses Society of the Philippines or iNurseSP is a Nursing Informatics Organization that serves as your portal to get involved with real life practices on information and communications technology applied in nursing education, research, service, and administration.</p> 
-				<p>iNurseSP envisions itself to be the lead organization in promoting a culture of excellence among its members through nursing informatics applied to nursing education, research, and practice dedicated towards paying forward to the society.</p>
+				<p><b>Informatics Nurses Society of the Philippines</b> or <b><i>iNurseSP</i></b> is a Nursing Informatics Organization that serves as your portal to get involved with real life practices on information and communications technology applied in nursing education, research, service, and administration.</p> 
+				<p><b>iNurseSP</b> envisions itself to be the lead organization in promoting a culture of excellence among its members through nursing informatics applied to nursing education, research, and practice dedicated towards paying forward to the society.</p>
 			</div>
 		</div>
 
 	<!-- CAROUSEL -->
-	<div>
+	<div id="carousel">
 		<div class="center">
 			<h5>National and International Partners to advance Nursing Informatics in the Philippines</h5>
 		</div>
@@ -157,7 +167,7 @@
 
 	      </div>
 	      <div class="col l3 s12">
-	        <h5 class="white-text">Home</h5>
+	        <h5 class="white-text"><a class="grey-text text-lighten-3" href="index.html">Home</a></h5>
 	        <ul>
 	          <li><a class="grey-text text-lighten-3" href="#!">News and Updates</a></li>
 	          <li><a class="grey-text text-lighten-3" href="#!">Membership</a></li>
@@ -184,7 +194,6 @@
 	    <div class="container">
 		  
 	    <small style="letter-spacing: 2px;">&copy; 2017 iNurseSP. All Rights Reserved. Design by <a href="https://web.facebook.com/jeremyrotoni31" target="_blank">jrotoni.</a></small>
-	    <!-- <a class="grey-text text-lighten-4 right" href="#!">More Links</a> -->
 	    </div>
 	  </div>
 	</footer>
@@ -213,6 +222,19 @@
 		    setTimeout(autoplay, 3100);
 		}
 
+		/*TO OPEN SIDENAV*/
+		$(".button-collapse").sideNav();
+
+		/* TO DISAPPEAR THE ARROW WHEN SCROLL DOWN */
+		$(window).bind('scroll', function() {
+		     if ($(window).scrollTop() > 90) {
+		         $('#arrowdown').hide();
+		     }
+		     else {
+		         $('#arrowdown').show();
+		     }
+		});
+
 		/* MODAL */
 		// $(document).ready(function(){
 
@@ -225,7 +247,11 @@
 		// $('#modal1').modal('open');
 
 		/* AUTO ADJUST HEIGHT BASED ON VIEWPORT*/
+		if ($(window).width() > 900) {
+
 		$('#main').height($(window).height() - 0)
+		}
+
 	</script>
 </body>
 </html>
