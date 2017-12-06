@@ -6,6 +6,8 @@
 /*http://colorpalettes.net/color-palette-3547/*/
 /*tinyurl.com/b3nc-csp1-docs*/
 
+/* https://codepen.io/desirecode/pen/MJPJqV */
+
 /* UNIVERSAL SET */
 * {
 	margin: 0;
@@ -52,6 +54,11 @@ nav {
 	background: linear-gradient(to top, rgba(178, 223, 219, 1) 0%, rgba(255, 255, 255, 1) 95%) !important;
 }
 
+#hamburger-icon {
+	font-size: 2.3rem; 
+	color: #fff;
+}
+
 #arrowback {
 	position: absolute !important;
 	top: 80% !important;
@@ -63,6 +70,8 @@ nav {
 main {
 	/*background: linear-gradient(to top, rgba(178, 223, 219, 0.4) 0%, rgba(255, 255, 255, 1) 95%);*/
 	background: url("../img/master-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #landingpage {
@@ -165,7 +174,6 @@ fieldset {
 
 /* NEWS */
 .newsfeed {
-	/*border-right: 2px solid #006064; */
 	height: 600px;
 }
 
@@ -177,14 +185,6 @@ fieldset {
 	background-position: 50% 50%;
 	box-shadow: 5px 5px 7px 0px #004d4047;
 	transition: all .5s ease-in-out;
-}
-
-.newsbrief:hover .newstitle h5 {
-	color: #ffab40;
-}
-
-.newsbrief:hover {
-	background-position: 0 75%;
 }
 
 .newstitle h5 {
@@ -203,6 +203,14 @@ fieldset {
     height: auto;
     padding: 3px 2px;
     background: linear-gradient(to right, rgba(0,46,30,0.6) 30%, rgba(0,0,0,0) 100%) ;
+}
+
+.newsbrief:hover .newstitle h5 {
+	color: #ffab40;
+}
+
+.newsbrief:hover {
+	background-position: 0 75%;
 }
 /* STICKY FOOTER */
 .page-footer {
@@ -251,6 +259,10 @@ main {
 	transform: translate(-50%, -50%);
 }
 
+.newsbrief {
+	margin-bottom: 10px;
+}
+
 }
 
 
@@ -262,6 +274,10 @@ and (max-width: 959px) {
 #landingpage {
 	background-position: center;
 	height: 600px !important;
+}
+
+.newsbrief {
+	margin-bottom: 10px;
 }
 
 }
