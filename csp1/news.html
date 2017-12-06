@@ -23,22 +23,16 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
+	<!-- Import Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
 </head>
 <body>
-
-	<!-- Import Facebook -->
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
 
 	<main>
 		<nav>
 		    <div class="nav-wrapper">
-		      <a href="#" data-activates="mobile-demo" class="button-collapse" style="margin-right: 5px;"><i class="material-icons">menu</i></a>
+		      <a href="#" data-activates="mobile-demo" class="button-collapse" style="margin-right: 5px;"><i class="material-icons" style="font-size: 2.5rem; color: #fff;">menu</i></a>
 		      <a href="index.html"><img src="img/logo.png"></a>
 		      <ul id="nav-mobile" class="right hide-on-med-and-down">
 		        <li><a class="center" href="index.html">Home</a></li>
@@ -60,12 +54,83 @@
 		      </ul>
 		    </div>
 		</nav>
-		<div class="facebook">
+		
+		<div id="newspaper">
 			<div class="row" style="margin-top: 10px; margin-bottom: 10px;">
-				<div class="col s12 m12 l6">
-					<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Finursesp&tabs=timeline&width=320&height=480&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="100%" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				<div class="newsfeed col l4 right hide-on-med-and-down center-align">		
+						<img src="http://www.stickpng.com/assets/images/585e5102cb11b227491c33a4.png" height="80px" width="320px">
+						<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Finursesp&tabs=timeline&width=320&height=550&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId=142649433160370" width="320" height="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 				</div>
-				<div class="col s12 l6">
+				<div class="row">
+					<div class="col s12 m6 l4">
+						<a href="https://usa.inquirer.net/8427/us-headed-worst-nursing-shortage" target="_blank">
+						<div class="newsbrief" style="background-image: url(http://usa.inquirer.net/files/2017/11/us-nursing-jobs.jpg);">
+						<div class="newstitle">
+							<h5>Is US headed for worst nursing shortage?</h5>
+							<h6>November 30, 2017</h6>
+						</div>	
+						</div>
+						</a>	
+					</div>
+
+					<div class="col s12 m6 l4">
+						<a href="http://usa.inquirer.net/1176/nurses-trail-singapore-canada" target="_blank">
+						<div class="newsbrief" style="background-image: url(http://usa.inquirer.net/files/2017/01/Ivy-Privado-Gonzales-center-in-Singapor.jpg);">
+						<div class="newstitle">
+							<h5>A nurse’s trail from Singapore to Canada</h5>
+							<h6>January 26, 2017</h6>
+						</div>	
+						</div>
+						</a>
+					</div>
+
+					<div class="col s12 m6 l4">
+						<a href="http://usa.inquirer.net/7993/fil-nurse-model-hurt-racist-assault-la" target="_blank">
+						<div class="newsbrief" style="background-image: url(http://usa.inquirer.net/files/2017/11/21762121_10212848589464089_556974187066532070_n-342x420.jpg);">
+						<div class="newstitle">
+							<h5>Fil-Am nurse-model hurt in racist assault in LA</h5>
+							<h6>November 11, 2017</h6>
+						</div>	
+						</div>
+						</a>
+					</div>
+
+					<div class="col s12 m6 l4">
+						<a href="http://usa.inquirer.net/6066/filipina-nurse-sues-hawaii-hospital-discrimination" target="_blank">
+						<div class="newsbrief" style="background-image: url(http://usa.inquirer.net/files/2017/08/About_Us.jpg);">
+						<div class="newstitle">
+							<h5>Filipina nurse sues Hawaii hospital for discrimination</h5>
+							<h6>August 19, 2017</h6>
+						</div>	
+						</div>
+						</a>
+					</div>	
+					
+					<div class="col s12 m6 l4">
+						<a href="http://usa.inquirer.net/7777/us-nursing-shortage-may-spur-recruitment-ph#ixzz50SdN0wNg" target="_blank">
+						<div class="newsbrief" style="background-image: url(http://usa.inquirer.net/files/2017/11/filipino-nurses-655x436-1.jpg);">
+						<div class="newstitle">
+							<h5>US nursing shortage may again spur recruitment from PH</h5>
+							<h6>November 03, 2017</h6>
+						</div>	
+						</div>
+						</a>
+					</div>	
+					
+					<div class="col s12 m6 l4">
+						<a href="http://usa.inquirer.net/4702/fil-nurse-cares-cancer-patient-caregiver#ixzz50SdhuSmq" target="_blank">
+						<div class="newsbrief" style="background-image: url(https://assets.rappler.com/612F469A6EA84F6BAE882D2B94A4B421/img/653AA07E7B3845B4BD9741E0451B90F0/japan-embassy-nurse-care-giver-job-fair-20150810.jpg);">
+						<div class="newstitle">
+							<h5>Fil-Am nurse cares for ‘the other cancer patient’ – the caregiver</h5>
+							<h6>June 22, 2017</h6>
+						</div>	
+						</div>
+						</a>
+					</div>	
+
+				</div>
+				
+<!-- 				<div class="col s12 m12 l6">
 					<ul class="pagination center">
 						<li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
 					    <li class="active teal darken-4"><a href="#!">1</a></li>
@@ -73,7 +138,7 @@
 				        <li class="waves-effect"><a href="#!">3</a></li>
 					    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 		</div>
 
@@ -92,10 +157,10 @@
 	      <div class="col l3 s12">
 	        <h5 class="white-text"><a class="grey-text text-lighten-3" href="index.html">Home</a></h5>
 	        <ul>
-	          <li><a class="grey-text text-lighten-3" href="#!">News and Updates</a></li>
-	          <li><a class="grey-text text-lighten-3" href="#!">Membership</a></li>
-	          <li><a class="grey-text text-lighten-3" href="#!">Careers</a></li>
-	          <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
+	          <li><a class="grey-text text-lighten-3" href="news.html">News and Updates</a></li>
+	          <li><a class="grey-text text-lighten-3" href="membership.html">Membership</a></li>
+	          <li><a class="grey-text text-lighten-3" href="careers.html">Careers</a></li>
+	          <li><a class="grey-text text-lighten-3" href="aboutus.html">About Us</a></li>
 	        </ul>
 	      </div>
 
