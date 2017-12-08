@@ -336,8 +336,13 @@ main {
 }
 
 #fit-mobile h3,
-#fit-mobile h4 {
+#fit-mobile h4,
+#fit-mobile h5 {
 	font-size: 1.7rem;
+}
+
+#urlfb {
+	font-size: 1rem;
 }
 
 #carouselcards .carousel-item {
