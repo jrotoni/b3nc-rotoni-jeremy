@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	
-	<title>iNurseSP | Informatics Nurses Society of the Philippines</title>
+	<title>News and Updates | iNurseSP</title>
 
 	<!-- import custom css -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -55,6 +55,33 @@
 		    </div>
 		</nav>
 		
+		<!-- SLIDER -->
+		<div class="slider">
+		  <ul class="slides">
+		    <li>
+		      <img src="img/right-nurse.png"> <!-- random image -->
+		      <div class="caption left-align">
+		        <h3><span>Get</span> the latest news in health informatics</h3>
+		        <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
+		      </div>
+		    </li>
+		    <li>
+		      <img src="img/bg-registration.png"> <!-- random image -->
+		      <div class="caption right-align">
+		        <h3><span>Learn</span> from our experts</h3>
+		        <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
+		      </div>
+		    </li>
+		    <li>
+		      <img src="img/bg.png"> <!-- random image -->
+		      <div class="caption center-align">
+		        <h3><span>Like</span> us on <span>Facebook</span> for more updates!</h3>
+		        <h5 class="light grey-text text-lighten-3">https://www.facebook.com/<span class="orange-text text-accent-2">inursesp</span></h5>
+		      </div>
+		    </li>
+		  </ul>
+		</div> <!-- /.slider -->
+
 		<div id="newspaper">
 			<div class="row" style="margin-top: 10px; margin-bottom: 10px;">
 				<div class="newsfeed col l4 right hide-on-med-and-down center-align">		
@@ -145,6 +172,9 @@
 
 	</main>
 
+	<!-- FLOATING ARROW SCROLL TO TOP -->
+	<a href="#" id="scroll" class="waves-effect waves-light btn btn-floating orange accent-2 z-depth-4" style="display: none;"><span><i class="large material-icons">arrow_upward</i></span></a>
+
 	<!-- FOOTER -->
 	<footer class="page-footer">
 	  <div class="container">
@@ -201,6 +231,29 @@
 			closeOnClick: true
 		});
 		
+		/* FLOATING ARROW SCROLL TO TOP */
+		$(document).ready(function(){ 
+		    $(window).scroll(function(){ 
+		        if ($(this).scrollTop() > 100) { 
+		            $('#scroll').fadeIn(); 
+		        } else { 
+		            $('#scroll').fadeOut(); 
+		        } 
+		    }); 
+		    $('#scroll').click(function(){ 
+		        $("html, body").animate({ scrollTop: 0 }, 600); 
+		        return false; 
+		    }); 
+		});
+
+		/* SLIDER */
+		$(document).ready(function(){
+		  $('.slider').slider({
+		  	indicators: false,
+		  	height: 380,
+		  	interval: 3200
+		  });
+		});
 	</script>
 </body>
 </html>

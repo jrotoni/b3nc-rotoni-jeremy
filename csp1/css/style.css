@@ -26,8 +26,42 @@ h5,
 h4,
 h3,
 h2,
-h1 {
+h1,
+li {
 	color: #006064;
+}
+
+/* FLOATING ARROW SCROLL TO TOP */
+#scroll {
+    position:fixed;
+    right:20px;
+    bottom:50px;
+    cursor:pointer;
+    width:55px;
+    height:55px;
+    background-color:#3498db;
+    display:none;
+    -webkit-border-radius:60px !important;
+    -moz-border-radius:60px !important;
+    border-radius:60px !important;
+}
+#scroll span {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-18px;
+    margin-top:-20px;
+    height:0;
+    width:0;
+}
+
+#scroll span i {
+	font-size: 2.5rem;
+}
+#scroll:hover {
+    background-color:#e74c3c;
+    opacity:1;filter:"alpha(opacity=100)";
+    -ms-filter:"alpha(opacity=100)";
 }
 
 
@@ -68,10 +102,7 @@ nav {
 
 /* MAIN */
 main {
-	/*background: linear-gradient(to top, rgba(178, 223, 219, 0.4) 0%, rgba(255, 255, 255, 1) 95%);*/
-	background: url("../img/master-bg.png");
-	background-repeat: no-repeat;
-	background-size: cover;
+	background: linear-gradient(to top, rgba(178, 223, 219, 0.4) 0%, rgba(255, 255, 255, 1) 95%);
 }
 
 #landingpage {
@@ -92,25 +123,8 @@ main {
 	transform: translate(-50%, -50%);
 }
 
-.card {
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 80%, rgba(255, 255, 255, 0.9) 90%) !important;
-}
-
-
-.card-action a {
-	color: white !important;
-	font-weight: bolder;
-	padding: 9px 30px;
-	border-radius: 15px;
-	background-color: #ffab40;
-}
-
-.card-action a:hover {
-	border: 1px solid #ffab40;
-	padding: 8px 25px;
-	border-radius: 15px;
-	background: rgba(0,100,90,0.7);
-	color: #ffab40 !important;
+#maincard {
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 80%, rgba(255, 255, 255, 0.9) 90%) !important;
 }
 
 .card-content p {
@@ -124,6 +138,15 @@ main {
 	color: #ffab40;
 	font-size: 2.2em;
 }
+
+.btn {
+	border-radius: 15px !important; 
+	font-weight: bolder !important; 
+}
+
+.btn:hover {
+	color: darkgreen !important;
+} 
 
 /* SHORT INTRODUCTION */
 
@@ -147,20 +170,30 @@ main {
 	background-size: cover;
 	background-position: top center;
 	position: relative;
+	margin-right: 0;
+	color: #006064;
 }
 
 .row form {
-	background: linear-gradient(to top right, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.8) 70%) !important;
-	/*background: linear-gradient(to bottom, rgba(178, 223, 219, 0.8) 22%, rgba(255, 255, 255, 0.8) 99%) !important;*/
-	height: 665px !important;
-	margin: 30px auto !important;
+	background: url(../img/clip.png);
+	background-size: 100% 100%;	
+}
+
+.input-field label {
+	font-size: 0.8rem !important;
 }
 
 fieldset {
 	padding: 5px !important;
 	margin: 12px !important;
-	border: 1px solid #006064 !important;
+	border: 0 solid #006064 !important;
 	height: 640px !important;
+}
+
+legend {
+	font-size: 1.5rem; 
+	font-weight: bold; 
+	padding: 0 15px;
 }
 
 
@@ -171,6 +204,16 @@ fieldset {
 	width: 70%;
 	margin: 0 auto;
 }
+
+#carouselcards .carousel-item {
+	height: 450px !important;
+	width: 400px !important;
+} 
+
+#membershipsteps {
+	margin-bottom: 20px;
+}
+
 
 /* NEWS */
 .newsfeed {
@@ -212,6 +255,31 @@ fieldset {
 .newsbrief:hover {
 	background-position: 0 75%;
 }
+
+/* SLIDES */
+.slides li img {
+	opacity: 0.1;
+}
+
+.backpic {
+	background: url(../img/half_nurse.jpg);
+	background-color: red !important;
+	max-width:100%;
+	max-height:100%;
+}
+
+.slides li h3,
+#swipeleft h3 {
+	/*font-family: 'Oswald', sans-serif;*/
+	font-weight: bolder;
+	color: #fff;
+}
+
+.slides li h3 span,
+#swipeleft h3 span {
+	color: #ffab40;
+}
+
 /* STICKY FOOTER */
 .page-footer {
 	background-color: #006064 !important;
@@ -263,6 +331,35 @@ main {
 	margin-bottom: 10px;
 }
 
+.slides li h3 {
+	font-size: 2.5rem;
+}
+
+#fit-mobile h3,
+#fit-mobile h4 {
+	font-size: 1.7rem;
+}
+
+#carouselcards .carousel-item {
+	width: 300px !important;
+}
+
+#carouselcards .carousel-item .card-content p {
+	font-size: 0.8rem;
+}
+
+#carouselcards .card-image img {
+	height: 200px !important;
+}
+
+#carouselcards {
+	height: 350px !important;
+}
+
+#sitemembership {
+	font-size: 13px;
+}
+
 }
 
 
@@ -278,6 +375,14 @@ and (max-width: 959px) {
 
 .newsbrief {
 	margin-bottom: 10px;
+}
+
+#membershipsteps {
+	margin-bottom: 20px;
+}
+
+#carouselcards .card-content {
+	height: 450px !important;
 }
 
 }
@@ -309,13 +414,16 @@ nav {
 	margin: 5% auto;
 }
 
+#working-imgcard {
+	top: 50%; 
+	transform: translateY(40%);
+}
 
+#carouselcards .card-content {
+	height: 450px !important;
+}
 
-
-
-
-
-/* ARROW */
+/* BOUNCING ARROW */
 .arrow {
   position: fixed;
   bottom: 10%;

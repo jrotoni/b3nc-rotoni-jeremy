@@ -25,8 +25,8 @@
 
 </head>
 <body>
-
 	<main id="landingpage">
+
 	<!-- NAVIGATION -->
 	<nav>
 	    <div class="nav-wrapper">
@@ -56,7 +56,7 @@
 <div class="container" id="factcheck">
 	<div class="row left">
         <div class="col s12 m9 l12">
-          <div class="card">
+          <div class="card" id="maincard">
             <div class="card-content">
             	<p><i class="fa fa-check-square-o" aria-hidden="true"></i> Be part of the Official Roster of Informatics Nurses </p>
             	<p><i class="fa fa-check-square-o" aria-hidden="true"></i> Access to free and CPD-certified resources</p>
@@ -64,7 +64,7 @@
             	<p><i class="fa fa-check-square-o" aria-hidden="true"></i> Gain training and volunteer experience with the working group</p>
             </div>
             <div class="card-action center">
-              <a class="z-depth-3" href="#registration-form" style="margin-right: 0;">Register Now</a>
+              <a class="btn waves-effect waves-green orange accent-2 z-depth-3" href="#registration-form">Register Now</a>
             </div>
           </div>
         </div>
@@ -73,52 +73,10 @@
 
 <div class="arrow bounce" id="arrowdown"></div>
 
-
-				      <!-- MODAL -->
-<!-- 				      <div class="card-action">
-				        <a class="waves-effect waves-light modal-trigger" href="#modal1" style="margin-right: 0;">Register Now</a>
-				        <div id="modal1" class="modal">
-				            <div class="modal-content" style="padding: 25px 150px 0 150px;">
-				              <div class="row">
-				                  <form class="col s12">
-				                    <div class="row">
-				                      <div class="input-field col s12">
-				                    	<i class="material-icons prefix">account_circle</i>
-				                        <input id="icon_prefix" type="text" class="validate">
-				                        <label for="icon_prefix">First Name</label>
-				                      </div>
-
-				                      <div class="input-field col s12 right">
-				                        <input id="icon_prefix" type="text" class="validate">
-				                        <label for="icon_prefix">Last Name</label>
-				                      </div>
-
-				                      <div class="input-field col s12">
-				                      <i class="material-icons prefix">phone</i>
-				                        
-				                        <input id="icon_telephone" type="tel" class="validate">
-				                        <label for="icon_telephone">Contact Number</label>
-				                      </div>
-
-				                      <div class="input-field col s12">
-				                      	<i class="material-icons prefix">email</i>
-				                      	<input id="email" type="email" class="validate">
-		                                <label for="email" data-error="wrong" data-success="right">Email</label>
-		                              </div>
-				                    </div>
-				                  </form>
-				                </div>
-				            </div>
-
-				            <div class="modal-footer" style="text-align: center;">
-				              <a href="#!" class="modal-action modal-close waves-effect waves-green">Submit</a>
-				            </div>
-				          </div>
-				      </div> -->
-
-
 	</main>
-		
+	
+	<!-- FLOATING ARROW SCROLL TO TOP -->
+	<a href="#" id="scroll" class="waves-effect waves-light btn btn-floating orange accent-2 z-depth-4" style="display: none;"><span><i class="large material-icons">arrow_upward</i></span></a>	
 
 	<div id="shortintro">
 		<div class="container flow-text">
@@ -129,17 +87,12 @@
 
 	<div id="registration-form">
 		
-	<div class="container" style="color: #006064;">
+	<div class="container">
 		<div class="row">
 				
 			<form class="col s12 l12 center" action="#" method="#">
 			<fieldset>
-				<legend style="font-size: 1.5rem; font-weight: bold; padding: 0 15px;"><i class="fa fa-pencil" aria-hidden="true"></i> Sign Up</legend>
-
-				<div style="font-size: 4rem;"><i class="fa fa-file-text" aria-hidden="true"></i></div>
-
-				<div style="margin-top: 5px;">
-					
+				<div style="margin-top: 125px;">
 				<div class="input-field col s6 l6">
 				          <i class="large material-icons prefix">account_circle</i>
 				          <input id="icon_prefix" type="text" class="validate">
@@ -172,7 +125,7 @@
 
 				</div>
 
-	            <input type="submit" class="btn orange accent-2 z-depth-3" value="Submit" style="border-radius: 15px; font-weight: bolder; margin-top: 50px;">
+	            <input type="submit" class="btn waves-effect waves-green orange accent-2 z-depth-3" value="Submit" style="margin-top: 50px;">
 			</fieldset>
 			</form>
 			
@@ -181,17 +134,17 @@
 	</div> <!-- /#registration-form -->
 
 	<!-- CAROUSEL -->
-	<div id="carousel">
+	<div id="logocarousel">
 		<div class="center">
 			<h5>National and International Partners to advance Nursing Informatics in the Philippines</h5>
 		</div>
 	<div class="carousel" style="height: 300px;">
-	  	<a class="carousel-item" href="#"><img src="img/UPCM.png" alt="UP College of Medicine"></a>
-	  	<a class="carousel-item" href="#"><img src="img/IMIA.jpg" alt="International Medical Informatics Association"></a>
-	  	<a class="carousel-item" href="#"><img src="img/HIMSS.jpg" alt="Healthcare Information and Management Systems Society (HIMSS)"></a>
-	  	<a class="carousel-item" href="#"><img src="img/MHIMSS.png" alt="Mobile Healthcare Information and Management Systems Society"></a>
-	  	<a class="carousel-item" href="#" style="line-height: 250px;"><img src="img/PMIS.jpg" alt="Philippine Medical Informatics Society"></a>
-	  	<a class="carousel-item" href="#"><img src="img/PNA.png" alt="Philippine Nurses Association"></a>
+	  	<a class="carousel-item" href="https://www.upm.edu.ph/node/1250" target="_blank"><img src="img/UPCM.png" alt="UP College of Medicine"></a>
+	  	<a class="carousel-item" href="http://imia-medinfo.org/wp/" target="_blank"><img src="img/IMIA.jpg" alt="International Medical Informatics Association"></a>
+	  	<a class="carousel-item" href="www.himss.org/" target="_blank"><img src="img/HIMSS.jpg" alt="Healthcare Information and Management Systems Society (HIMSS)"></a>
+	  	<a class="carousel-item" href="http://www.himss.org/library/mhealth" target="_blank"><img src="img/MHIMSS.png" alt="Mobile Healthcare Information and Management Systems Society"></a>
+	  	<a class="carousel-item" href="www.philmedinfo.org" style="line-height: 250px;" target="_blank"><img src="img/PMIS.jpg" alt="Philippine Medical Informatics Society"></a>
+	  	<a class="carousel-item" href="www.pna-ph.org/" target="_blank"><img src="img/PNA.png" alt="Philippine Nurses Association"></a>
 	</div>
 	</div>
 
@@ -296,6 +249,29 @@
 
 		$('#landingpage').height($(window).height() - 0)
 		}
+
+		/* FLOATING ARROW SCROLL TO TOP */
+		$(document).ready(function(){ 
+		    $(window).scroll(function(){ 
+		        if ($(this).scrollTop() > 100) { 
+		            $('#scroll').fadeIn(); 
+		        } else { 
+		            $('#scroll').fadeOut(); 
+		        } 
+		    }); 
+		    $('#scroll').click(function(){ 
+		        $("html, body").animate({ scrollTop: 0 }, 600); 
+		        return false; 
+		    }); 
+		});
+
+		/* SMOOTH SCROLL but top :/ */
+		$('a').click(function(){
+		    $('html, body').animate({
+		        scrollTop: $( $(this).attr('href') ).offset().top
+		    }, 500);
+		    return false;
+		});
 
 	</script>
 </body>

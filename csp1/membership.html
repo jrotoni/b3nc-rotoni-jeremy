@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	
-	<title>iNurseSP | Informatics Nurses Society of the Philippines</title>
+	<title>Membership | iNurseSP</title>
 
 	<!-- import custom css -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -23,11 +23,13 @@
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
+	<!-- Import Animate.css -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+
 </head>
 <body>
-	<main>
-		<nav>
-				
+	<main id="membershippage">
+		<nav>				
 		    <div class="nav-wrapper">
 		      <a href="#" data-activates="mobile-demo" class="button-collapse" style="margin-right: 5px;"><i class="material-icons" id="hamburger-icon">menu</i></a>
 		      <a href="index.html"><img src="img/logo.png"></a>
@@ -52,160 +54,218 @@
 		    </div>
 		</nav>
 
+		<!-- SLIDER -->
+		<div class="slider">
+		  <ul class="slides">
+		    <li>
+		      <img src="img/right-nurse.png"> <!-- random image -->
+		      <div class="caption left-align">
+		        <h3><span>Be </span>part of the premier organization in Nursing Informatics</h3>
+		        <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
+		      </div>
+		    </li>
+		    <li>
+		      <img src="img/bg-registration.png"> <!-- random image -->
+		      <div class="caption right-align">
+		        <h3><span>Access</span> to free and CPD-certified resources</h3>
+		        <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
+		      </div>
+		    </li>
+		    <li>
+		      <img src="img/bg.png"> <!-- random image -->
+		      <div class="caption center-align">
+		        <h3><span>Register</span> now!</h3>
+		        <a href="http://members.inursesp.org" class="btn waves-effect waves-green orange accent-2 z-depth-3 white-text" style="margin-top: 25px;">Click Here</a>
+		        <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
+		      </div>
+		    </li>
+		  </ul>
+		</div> <!-- /.slider -->
+
+		
 		<!-- CARD INSTRUCTIONS -->
-		<div class="container">
+		<div class="container clear">
 			<div class="row">
-			    <div class="col s12 m12 l8 offset-l2">
+				
+			<div class="col s12 m12 l12">
+				<div class="center" id="membershipsteps">
+					<h5>Step-by-step Guide to Membership Registration!</h5>
+				</div>
+
+			<div class="carousel" id="carouselcards">			
+				<div class="carousel-item">					
+				<div class="card-panel backpic cyan darken-4 right-align valign-wrapper" id="swipeleft" style="height: 450px; padding-left: 0;">
+				  <h3><span><i class="large material-icons animated infinite fadeOutLeft">arrow_back</i></span></h3>
+				  <h3 class="white-text"><span>Swipe Left</span> to begin!</h3>
+				</div>
+				</div>
+
+				<div class="carousel-item">
+					
 			      <div class="card">
 			        <div class="card-image">
 			          <img class="materialboxed" src="img/register/0.png">
 			          <a class="btn-floating halfway-fab waves-effect waves-light orange accent-3 z-depth-3" style="text-align: center;"><b>1</b></a>
 			        </div>
-			        <div class="card-content z-depth-3">
+			        <div class="card-content">
 			        	<span class="card-title"><h5>Step #1</h5></span>
-			          <p>Log-in to <a href="http://members.inursesp.org" target="_blank">http://members.inursesp.org.</a></p>
+			          <p>Log-in to <a href="http://members.inursesp.org" target="_blank" id="sitemembership">http://members.inursesp.org.</a></p>
 			        </div>
 			      </div>
-			    </div>
-			  </div>
+				</div>
 
-			<div class="row">
-			    <div class="col s12 m12 l8 offset-l2">
+
+				<div class="carousel-item">
+					
 			      <div class="card">
 			        <div class="card-image">
 			          <img class="materialboxed" src="img/register/1.png">
 			          <a class="btn-floating halfway-fab waves-effect waves-light orange accent-3 z-depth-3" style="text-align: center;"><b>2</b></a>
 			        </div>
-			        <div class="card-content z-depth-3">
+			        <div class="card-content">
 			        	<span class="card-title"><h5>Step #2</h5></span>
 			          <p>Hover your mouse over the menu and click Membership Levels.</p>
 			        </div>
 			      </div>
-			    </div>
-			  </div>
+
+				</div>
 			  
-			<div class="row">
-			    <div class="col s12 m12 l8 offset-l2">
+				<div class="carousel-item">
+					
 			      <div class="card">
 			        <div class="card-image">
 			          <img class="materialboxed" src="img/register/2.png">
 			          <a class="btn-floating halfway-fab waves-effect waves-light orange accent-3 z-depth-3" style="text-align: center;"><b>3</b></a>
 			        </div>
-			        <div class="card-content z-depth-3">
+			        <div class="card-content">
 			        	<span class="card-title"><h5>Step #3</h5></span>
 			          <p>Select the appropriate membership level for you. Ensure that you qualify for the membership category as membership fees are non-refundable.</p>
 			        </div>
 			      </div>
-			    </div>
-			  </div>
+				</div>
 
-			<div class="row">
-			    <div class="col s12 m12 l8 offset-l2">
+
+			      <div class="carousel-item">
+			      	
 			      <div class="card">
 			        <div class="card-image">
 			          <img class="materialboxed" src="img/register/3.png">
 			          <a class="btn-floating halfway-fab waves-effect waves-light orange accent-3 z-depth-3" style="text-align: center;"><b>4</b></a>
 			        </div>
-			        <div class="card-content z-depth-3">
+			        <div class="card-content">
 			        	<span class="card-title"><h5>Step #4</h5></span>
 			          <p>Read the membership level details. Make sure that you qualify for the requirements.</p>
 			        </div>
 			      </div>
-			    </div>
-			  </div>
+			      </div>	
 
-			<div class="row">
-			    <div class="col s12 m12 l8 offset-l2">
+
+			      <div class="carousel-item">
+			      	
 			      <div class="card">
 			        <div class="card-image">
 			          <img class="materialboxed" src="img/register/4.png">
 			          <a class="btn-floating halfway-fab waves-effect waves-light orange accent-3 z-depth-3" style="text-align: center;"><b>5</b></a>
 			        </div>
-			        <div class="card-content z-depth-3">
+			        <div class="card-content">
 			        	<span class="card-title"><h5>Step #5</h5></span>
 			          <p>If you have any discount code, type it in the box then click APPLY.</p>
 			        </div>
 			      </div>
-			    </div>
-			  </div>  
+			      </div>
 
-			  <div class="row">
-			      <div class="col s12 m12 l8 offset-l2">
+			      <div class="carousel-item">
+			      	
 			        <div class="card">
 			          <div class="card-image">
 			            <img class="materialboxed" src="img/register/5.png">
 			            <a class="btn-floating halfway-fab waves-effect waves-light orange accent-3 z-depth-3" style="text-align: center;"><b>6</b></a>
 			          </div>
-			          <div class="card-content z-depth-3">
+			          <div class="card-content">
 			          	<span class="card-title"><h5>Step #6</h5></span>
 			            <p>Fill-up the account information and captcha verification details.</p>
 			          </div>
 			        </div>
 			      </div>
-			    </div>
 
-			  <div class="row">
-			      <div class="col s12 m12 l8 offset-l2">
+
+			        <div class="carousel-item">
+			        	
 			        <div class="card">
 			          <div class="card-image">
 			            <img class="materialboxed" src="img/register/6.png">
 			            <a class="btn-floating halfway-fab waves-effect waves-light orange accent-3 z-depth-3" style="text-align: center;"><b>7</b></a>
 			          </div>
-			          <div class="card-content z-depth-3">
+			          <div class="card-content">
 			          	<span class="card-title"><h5>Step #7</h5></span>
 			            <p>Read the Membership Terms and Conditions carefully. Once you agree, tick the box to show your agreement (in red circle). Click "Checkout with Paypal" once.</p>
 			          </div>
 			        </div>
-			      </div>
-			    </div>
-			    
-			  <div class="row">
-			      <div class="col s12 m12 l8 offset-l2">
+			        </div>
+
+			      
+			        <div class="carousel-item">
+			        	
 			        <div class="card">
 			          <div class="card-image">
 			            <img class="materialboxed" src="img/register/7.png">
 			            <a class="btn-floating halfway-fab waves-effect waves-light orange accent-3 z-depth-3" style="text-align: center;"><b>8</b></a>
 			          </div>
-			          <div class="card-content z-depth-3">
+			          <div class="card-content">
 			          	<span class="card-title"><h5>Step #8</h5></span>
 			            <p>Choose a way to pay your annual membership dues. If you have an existing PayPal account, login using your account credentials.</p>
 			          </div>
 			        </div>
-			      </div>
-			    </div>
+			        </div>
 
-			  <div class="row">
-			      <div class="col s12 m12 l8 offset-l2">
+
+			        <div class="carousel-item">
+			        	
 			        <div class="card">
 			          <div class="card-image">
 			            <img class="materialboxed" src="img/register/8.png">
 			            <a class="btn-floating halfway-fab waves-effect waves-light orange accent-3 z-depth-3" style="text-align: center;"><b>9</b></a>
 			          </div>
-			          <div class="card-content z-depth-3">
+			          <div class="card-content">
 			          	<span class="card-title"><h5>Step #9</h5></span>
 			            <p>If you have no existing PayPal account, create a new PayPal account using your debit card or credit card information.</p>
 			          </div>
 			        </div>
-			      </div>
-			    </div>
+			        </div>
 
-			  <div class="row">
-			      <div class="col s12 m12 l8 offset-l2">
+
+			        <div class="carousel-item">
+			        	
 			        <div class="card">
 			          <div class="card-image">
 			            <img class="materialboxed" src="img/register/9.png">
 			            <a class="btn-floating halfway-fab waves-effect waves-light orange accent-3 z-depth-3" style="text-align: center;"><b>10</b></a>
 			          </div>
-			          <div class="card-content z-depth-3">
+			          <div class="card-content">
 			          	<span class="card-title"><h5>Step #10</h5></span>
 			            <p>Congratulations! You have completed the membership application process.</p>
 			          </div>
 			        </div>
-			      </div>
-			    </div>  
+			        </div>
 
+			        <div class="carousel-item">			        	
+			        	<div class="card backpic cyan darken-4">
+			        		<div class="card-content center" id="swipeleft" style="height: 450px;">
+			        		  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+			        		  <h3><span>Register</span> now!</h3> 
+			        		<a href="http://members.inursesp.org" class="btn waves-effect waves-green orange accent-2 z-depth-3 white-text">Click Here</a>
+			        		  </div>
+			        		</div>
+			        	</div>
+			        	</div>    
+			</div>
+			</div>
+		</div> <!-- /.row -->
 		</div> <!-- /.container -->
 	</main>
+
+	<!-- FLOATING ARROW SCROLL TO TOP -->
+	<a href="#" id="scroll" class="waves-effect waves-light btn btn-floating orange accent-2 z-depth-4" style="display: none;"><span><i class="large material-icons">arrow_upward</i></span></a>
 
 	<!-- FOOTER -->
 	<footer class="page-footer">
@@ -256,6 +316,7 @@
 
 	<!-- customized script -->
 	<script type="text/javascript">
+
 		/*TO OPEN SIDENAV*/
 		$(".button-collapse").sideNav();
 		$(".button-collapse").sideNav({
@@ -266,6 +327,41 @@
 		$(document).ready(function(){
 		  $('.materialboxed').materialbox();
 		});
+
+		/* FLOATING ARROW SCROLL TO TOP */
+		$(document).ready(function(){ 
+		    $(window).scroll(function(){ 
+		        if ($(this).scrollTop() > 100) { 
+		            $('#scroll').fadeIn(); 
+		        } else { 
+		            $('#scroll').fadeOut(); 
+		        } 
+		    }); 
+		    $('#scroll').click(function(){ 
+		        $("html, body").animate({ scrollTop: 0 }, 600); 
+		        return false; 
+		    }); 
+		});
+
+		/* SLIDER */
+		$(document).ready(function(){
+		  $('.slider').slider({
+		  	indicators: false,
+		  	height: 380,
+		  	interval: 3200
+		  });
+		});
+
+		/* CAROUSEL */
+		$(document).ready(function(){
+      	$('.carousel').carousel({
+      		dist:0,
+      		shift:20,
+      		padding:10,
+      		noWrap: true,
+      	});
+	    });
+
 	</script>
 </body>
 </html>

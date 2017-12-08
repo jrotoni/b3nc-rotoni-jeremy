@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	
-	<title>iNurseSP | Informatics Nurses Society of the Philippines</title>
+	<title>Careers | iNurseSP</title>
 
 	<!-- import custom css -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -50,6 +50,83 @@
 		      </ul>
 		    </div>
 		</nav>
+
+	<!-- SLIDER -->
+	<div class="slider">
+	  <ul class="slides">
+	    <li>
+	      <img src="img/master-bg.png"> <!-- random image -->
+	      <div class="caption center-align">
+	        <h3><span>Be</span> part of the iNurseSP Team!</h3>
+	        <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
+	      </div>
+	    </li>
+	    <li>
+	      <img src="img/right-nurse.png"> <!-- random image -->
+	      <div class="caption left-align">
+	        <h3><span>Collaborate</span> with allied professionals</h3>
+	        <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
+	      </div>
+	    </li>
+	    <li>
+	      <img src="img/bg-registration.png"> <!-- random image -->
+	      <div class="caption right-align">
+	        <h3><span>Meet</span> the different working groups</h3>
+	        <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
+	      </div>
+	    </li>
+	    <li>
+	      <img src="img/bg.png"> <!-- random image -->
+	      <div class="caption center-align">
+	        <h3><span>Join</span> iNurseSP Working Groups now!</h3>
+	        <!-- <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5> -->
+	      </div>
+	    </li>
+	  </ul>
+	</div> <!-- /.slider -->
+
+	<!-- FLOATING ARROW SCROLL TO TOP -->
+	<a href="#" id="scroll" class="waves-effect waves-light btn btn-floating orange accent-2 z-depth-4" style="display: none;"><span><i class="large material-icons">arrow_upward</i></span></a>
+
+	<div class="container">
+	<!-- 	<div class="col s12 m7"> -->
+		  <h3 class="header">iNurseSP Working Groups</h3>
+		  <div class="row card">
+		    
+		    <div class="card-image col s12 l4" id="working-imgcard">		
+		      <img src="img/working-groups.png">
+		    </div>
+		    
+		    <div class="card-stacked col s12 l8">
+		      <div class="card-content">
+		        <p>Be part of the <b>iNurseSP Team!</b></p>
+		        <p>If you are interested in any of the working groups, drop us your pitch by clicking the "<b>Join Now</b>" button below.</p>
+		        <p>Some of the working groups you can participate:</p>
+		       <ul>
+		       	<li><i class="tiny material-icons">grade</i> HL7 Standards</li>
+		       	<li><i class="tiny material-icons">grade</i> Electronic Medical Records</li>
+		       	<li><i class="tiny material-icons">grade</i> Operative Nursing</li>
+		       	<li><i class="tiny material-icons">grade</i> Nursing Entrepreneurship</li>
+		       	<li><i class="tiny material-icons">grade</i> Research</li>
+		       	<li><i class="tiny material-icons">grade</i> iNurseSP Website Maintenance</li>
+		       	<li><i class="tiny material-icons">grade</i> TIGER initiative Foundation eNewsletter</li>
+		       	<li><i class="tiny material-icons">grade</i> mHealth</li>
+		       	<li><i class="tiny material-icons">grade</i> eLearning</li>
+		       </ul>
+		      </div> <!-- /.card-content -->
+		      
+		      <div class="card-action">
+		      	<div class="center">
+		        <a class="btn waves-effect waves-green orange accent-2 z-depth-3" href="mailto:admin@inursesp.org" target="_blank" style="margin-right: 0;">Join Now</a>
+		      	</div>
+		      </div> <!-- /.card-action -->
+		    
+		    </div> <!-- /.card-stacked -->
+
+		  </div> <!-- /.card-horizontal -->
+	<!-- 	</div> --> <!-- col s12 m7 -->
+
+	</div> <!-- /.container -->
 	</main>
 
 	<!-- FOOTER -->
@@ -101,11 +178,36 @@
 
 	<!-- customized script -->
 	<script type="text/javascript">
+		
 		/*TO OPEN SIDENAV*/
 		$(".button-collapse").sideNav();
 		$(".button-collapse").sideNav({
 			closeOnClick: true
 		});
+
+		/* SLIDER */
+		$(document).ready(function(){
+		  $('.slider').slider({
+		  	indicators: false,
+		  	height: 480,
+		  	interval: 3200
+		  });
+		});
+		
+		/* FLOATING ARROW SCROLL TO TOP */
+		$(document).ready(function(){ 
+		    $(window).scroll(function(){ 
+		        if ($(this).scrollTop() > 100) { 
+		            $('#scroll').fadeIn(); 
+		        } else { 
+		            $('#scroll').fadeOut(); 
+		        } 
+		    }); 
+		    $('#scroll').click(function(){ 
+		        $("html, body").animate({ scrollTop: 0 }, 600); 
+		        return false; 
+		    }); 
+		});    
 	</script>
 </body>
 </html>
