@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>What is JavaScript Can Do?</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div class="wrapper">
+		<h1 id="elements">What JavaScript can do?</h1>
+		<hr>
+
+
+		<h2>JavaScript can hide/show html elements</h2>
+		<button onclick="hideAll()">Hide All</button>
+		<br>
+		<button onclick="showAll()">Show All</button>
+
+		<div id="all">
+			<h2 id="content">JavaScript can change HTML content.</h2>
+			<button onclick="changeContent()">Chang HTML Content</button>
+
+			<h2>JavaScript can change HTML attributes.</h2>
+			<button onclick="changeAttr()">Change Image Height</button>
+			<button onclick="changeImage()">Change Image</button>
+			<br>
+			<img id="attr" src="img/image1.gif" height="230"> 
+
+			<h2 id="css">JavaScript can change HTML styles.</h2>
+			<button onclick="changeColor()">Change Style</button>
+
+			<h2 id="elements">JavaScript can get and manipulate HTML elements</h2>
+			<form method="" action="">
+				<input id="input1" type="number" value="1">+
+				<input id="input2" type="number" value="3">=
+				<span id="sum"></span>
+			</form>
+			<br>
+			<button onclick="computeSum(), alert(sum)">Compute Sum</button>
+
+		</div>
+
+		<hr>
+
+		<button onclick="alert('This is inline')">This is inline</button>
+
+		<hr>
+
+		<h3 id="heading">This is a heading</h3>
+	</div>
+
+	<script>
+		function hideAll() {
+			document.getElementById("all").style.display = "none";
+		}
+
+		function showAll() {
+			document.getElementById("all").style.display = "block";
+		}
+
+		function changeContent() {
+			document.getElementById("content").innerHTML = "Jeremy Rotoni";
+		}
+
+		function changeAttr() {
+			document.getElementById("attr").height = 100;
+		}
+
+		function computeSum() {
+			var a = document.getElementById("input1").value;
+			var b = document.getElementById("input2").value;
+			var sum = parseInt(a) + parseInt(b);
+			document.getElementById("sum").innerHTML = sum;
+			return sum;
+		}
+
+		document.getElementById("heading").innerHTML = "JavaScript";
+	</script>
+
+	<script src="js/script.js"></script>
+</body>
+</html>
