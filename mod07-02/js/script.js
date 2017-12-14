@@ -36,9 +36,10 @@ var navClass;
 function changeColor(className, id=null) {
 	if (id == null) {
 		navClass = className.replace("nav-box ", ""); /* will get color select from navigation */
+		
 	} else {
-		var boxClass = className.split(" "); /* will create array of class names*/
-		// alert(boxClass);
+		var boxClass = className.split(" "); /* will create array of class names  */ 
+		alert(boxClass);
 		var boxClassLength = boxClass.length; /* get size of array boxClass */
 		var element = document.getElementById(id); /* target the container to change the background color */
 
