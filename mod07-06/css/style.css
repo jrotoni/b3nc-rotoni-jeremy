@@ -1,0 +1,56 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: grey;
+}
+
+.wrapper {
+	background-color: #222;
+	width: 80vw; /* vw = viewport width */
+	/*height: 100vh;  vh = viewport height */
+	margin: 0 auto;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#display {
+	width: 90%;
+	margin: 0 auto;
+	white-space: nowrap;
+	text-align: center;
+	overflow: hidden;
+	font-size: 15vw;
+	text-overflow: ellipsis;
+}
+
+p {
+	/*position: absolute;*/
+	margin: 25px 0;
+	margin-top: 0;
+	
+	color: white;
+}
+
+
+input {
+	/*display: block;*/
+	width: 15vw;
+	/*padding: 20px;*/
+	/*margin: 30px auto;*/
+	font-size: 50px;
+	margin: 5px;
+	/*text-align: center;*/
+}
