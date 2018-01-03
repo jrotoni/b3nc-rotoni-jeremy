@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Intro</title>
+</head>
+<body>
+
+<input type="text" id="num">
+<br>
+<input type="number" id="percentage" max=100 min=1>
+<button onclick="go()">Go!</button>
+<p id="show">Show result here</p>
+
+<script type="text/javascript">
+	function go() {
+		var num = parseFloat(document.getElementById('num').value);
+		var percent = parseInt(document.getElementById('percentage').value);
+		document.getElementById('show').innerHTML = "The " + percent + "% of " + num + " is " + num * (percent / 100) + ".";
+		// document.getElementById('num').value = "";
+	}
+
+
+</script>
+</body>
+</html>

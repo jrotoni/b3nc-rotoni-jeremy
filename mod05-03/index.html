@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Intro</title>
+	<style type="text/css">
+		#middle{
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+	<div id="middle">	
+	<h1 id="intro">JavaScript Introduction</h1>
+	<input type="text" id="textH1" onchange="randomize()">
+	<!-- <button onclick="randomize()">Click Me!</button> -->
+	</div>
+
+</body>
+
+<script type="text/javascript">
+	var x = document.getElementById("intro");
+	x.innerHTML = "Change Background Color";
+	x.style.color = "black";
+
+	function randomize() {
+	  document.getElementsByTagName('body')[0].style.backgroundColor = randomColors();
+	  var code = document.getElementById("textH1").value;
+	  x.innerHTML = code; 
+	}
+	// random colors - taken from here: http://www.paulirish.com/2009/random-hex-color-code-snippets/
+
+	function randomColors() {
+	  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+	}
+</script>
+</html>
