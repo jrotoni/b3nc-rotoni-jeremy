@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Intro</title>
+</head>
+<body>
+	<div style="text-align: center;">
+		
+	<input type="number" id="num" onchange="compute()">
+	<!-- <button>Show</button> -->
+	<h2 id="display"></h2>
+	</div>
+</body>
+
+<script type="text/javascript">
+	function compute() {
+		// var x = 0;
+		// var even = 0;
+		// var odd = 0;
+
+		// while(x<=50){
+		// 	if(x%2==0){
+		// 		even = even + x;			
+		// 	} else {
+		// 		odd = odd + x;
+		// 	}
+		// 	x++; 
+		// }
+
+
+		// alert(even);
+		// alert(odd);
+		// document.getElementById("display").innerHTML = "The sum of all even numbers is " + even + " while the sum of all odd numbers is " + odd;
+
+
+		// for(var x=0; x<=20; x++) {
+		// 	if(x%3==0 && x%5==0) {
+		// 		console.log(x+" is multiple of 3 AND 5.")
+		// 	}
+		// 	else if(x%3==0 && x%5!=0) {
+		// 		console.log(x+" is multiple of 3 but NOT multiple of 5.")
+		// 	}
+		// 	else if(x%3!=0 && x%5==0) {
+		// 		console.log(x+" is NOT multiple of 3 but multiple of 5.")
+		// 	}
+		// 	else if (x%3!=0 && x%5!=0) {
+		// 		console.log(x+" is NOT multiple of 3 and NOT multiple of 5.")
+		// 	}
+
+		// }
+
+		var star = "";
+		var y = document.getElementById("display");
+		var num = document.getElementById("num").value;
+		
+		for(var x=1; x<=num; x++){
+			for(var y=1; y<=num; y++){
+			y.innerHTML += " *";
+				
+			}
+			y.innerHTML += "<br>";
+		}
+
+		
+	}
+		
+
+</script>
+</html>
