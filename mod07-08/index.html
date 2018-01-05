@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title></title>
+</head>
+<body>
+
+	<p id="myName1"></p>
+	<p id="myName2"></p>
+
+<script type="text/javascript">
+	
+	// var i = 0;
+	// for(i=0; i <= 10; i++){
+	// 	if(i<=5){
+	// 		continue;
+	// 	}
+	// 	alert("Number is " + i);
+	// }
+
+	function printMyName(yourName, element) {
+		// var yourName = " Juan Dela Cruz"
+	for(var x=0; x<=100; x+=5){
+		// document.write("Juan Dela Cruz <br>");
+		document.getElementById(element).innerHTML += x + " " + yourName + "<br>";
+		
+	}
+}
+
+	// function printMyName() {
+	// 	var text = "";
+	// 	var yourName = "Juan Dela Cruz";
+	// 	var counter;
+	// 	for(counter=1; counter<=20; counter += 3){
+	// 		 text = text + counter + " " + yourName + "<br>"
+		
+	// 	}
+	// 		document.getElementById("myName").innerHTML = text;
+	// }
+
+	// printMyName("Maymi", "myName1");
+	// printMyName("pugi", "myName2");
+
+	function addThisNumber(number1, number2, operator){
+		// var answer = number1 + number2;
+		var answer = 0;
+
+		switch (operator) {
+			case "+": answer = number1 + number2;
+			return "The answer is " + answer;
+			break;
+
+			case "-": answer = number1 - number2;
+			return answer;
+			break;
+
+			case "*": answer = number1 * number2;
+			return answer;
+			break;
+
+			case "/": answer = number1 / number2;
+			return answer;
+			break;
+
+			default: return "error";
+			break;
+		}
+		
+		
+	}
+
+	document.getElementById("myName1").innerHTML = 	addThisNumber(5, 2, "+/asd ");
+
+
+</script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

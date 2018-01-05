@@ -49,17 +49,30 @@
 
 		// }
 
+		// NOT WORKING BELOW THIS CODE
+
 		var star = "";
-		var y = document.getElementById("display");
+		var z = document.getElementById("display");
+		z.innerHTML = "";
 		var num = document.getElementById("num").value;
 		
 		for(var x=1; x<=num; x++){
 			for(var y=1; y<=num; y++){
-			y.innerHTML += " *";
+			z.innerHTML += " *";
 				
 			}
-			y.innerHTML += "<br>";
+			z.innerHTML += "<br>";
 		}
+
+		// document.getElementById("display").innerHTML = "";
+		// var num = document.getElementById("num").value;
+
+		// for(var x=0; x<num; x++){
+		// 	for(var y=0; y<num; y++){
+		// 		document.getElementById("display").innerHTML += " *";
+		// 	}
+		// 	document.getElementById("display").innerHTML += "<br>";
+		// }
 
 		
 	}
