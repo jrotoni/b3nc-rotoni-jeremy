@@ -1,0 +1,48 @@
+ul li {
+	text-transform: capitalize;
+	list-style-type:none;
+}
+
+li:before {
+	content: "-";
+	padding-right: 8px;
+}
+
+/*table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+	background-color: black;
+	color: white;
+	padding: 5px;
+}
+
+td {
+	border: 1px solid black;
+	padding: 5px;
+}*/
+
+
+span {
+	border: 1px solid #073d19;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	margin: -2px 0;
+}
+
+
+
+#black {
+	background-color: #073d19;
+}
+
+#white {
+	background-color: white;
+}
+
+#black:hover {
+	background-color: red;
+}
