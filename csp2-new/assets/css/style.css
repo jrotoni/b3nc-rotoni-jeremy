@@ -1,0 +1,31 @@
+body {
+	background-color: gold;
+}
+
+.navbar-inverse {
+	margin: 0;
+}
+
+.wrapper {
+	width: 80vw;
+	height: 87.8vh;
+	background-color: white;
+	margin: 0 auto;
+}
+
+h1 {
+	margin: 0;
+}
+
+#loginForm,
+#registerForm {
+	width: 40%;
+	margin: 0 auto;
+}
+
+/* Main Footer */
+.main-footer {
+	background-color: grey;
+	padding: 15px;
+	text-align: center;
+}
