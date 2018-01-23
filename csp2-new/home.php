@@ -2,6 +2,10 @@
 
 session_start();
 
+if (!isset($_SESSION['current_user'])) {
+	header('location: login.php');
+}
+
 function getTitle() {
 	echo 'Home';
 }

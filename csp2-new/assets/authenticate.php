@@ -21,6 +21,7 @@ foreach ($users as $user) {
 		// echo "Login was successful";
 		$isLogInSuccessful = true;
 		$_SESSION['current_user'] = $user['username'];
+		$_SESSION['role'] = $user['role'];
 		break;
 	}
 }

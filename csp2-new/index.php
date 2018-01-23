@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+
+if (isset($_SESSION['current_user'])) {
+	header('location: home.php');
+}
+
 function getTitle() {
 	echo 'Welcome to Kraff Beeer Philippines!';
 }
