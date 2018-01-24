@@ -26,8 +26,8 @@ include 'partials/head.php';
 		<label for="password">Password</label>
 		<input type="password" name="password" id="password" placeholder="Enter password" class="form-control" required>
 
-		<label for="password">Confirm Password</label>
-		<input type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter password" class="form-control" required>
+		<label for="confirmPassword">Confirm Password</label>
+		<input type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter password" class="form-control" disabled required>
 
 		<label for="email">Email Address</label>
 		<input type="email" name="email" id="email" placeholder="email@domain.com" class="form-control" required>
@@ -46,15 +46,49 @@ include 'partials/foot.php';
 ?>
 
 	<script type="text/javascript">
-		$('#username').keyup(function(){
+		$('#username').on('input', function(){
 			var usernameText = $(this).val();
 			// console.log(usernameText);
 			$.post('assets/username_validation.php', 
 				{username: usernameText}, 
 				function(data, status) {
-					console.log('Processed ' + data);
+					// console.log('Processed ' + data);
+					$('[for="username"]').html(data);
 				});
 		});
+
+		$('#password').on('input', function(){
+			if($('#password').val() == ""){
+				$('#confirmPassword').prop('disabled', true);
+			} else {
+				$('#confirmPassword').prop('disabled', false);
+			}
+		});
+
+		$('#confirmPassword').on('input', matchPassword);
+		
+		function matchPassword() {
+				if ($('#password').val() == $(this).val()) {
+					// console.log("conffeeeerrrmmm!!");
+					$('[for="confirmPassword"]').html('Password <span class="green-message">match!</span>');	
+				} else {
+					$('[for="confirmPassword"]').html('Password <span class="red-message">not match!</span>');	
+					// console.log("wrong");
+				}	
+		}
+
+		$('#email').on('input', function() {
+			var emailText = $(this).val();
+			// console.log(usernameText);
+
+			$.post('assets/email_address_validation.php',
+				{ email: emailText },
+				function(data, status) {
+					// console.log('Processed: ' + data);
+					$('[for="email"]').html(data);
+				});
+		});
+
 	</script>
 
 </body>
