@@ -1,7 +1,9 @@
 <?php
 
+session_start();
+
 function getTitle() {
-	echo 'Register';
+	echo 'Create New Item Page';
 }
 
 include 'partials/head.php';
@@ -17,22 +19,32 @@ include 'partials/head.php';
 	<!-- wrapper -->
 	<main class="wrapper">
 
-		<h1>Register Page</h1>
+		<h1>Create New Item Page</h1>
 
-	<form id= "registerForm" method="POST" action="assets/registration.php" class="form-group">
-		<label for="username">Username</label>
-		<input type="text" name="username" id="username" placeholder="Enter new username" class="form-control" required>
+	<form id= "registerForm" method="POST" action="assets/createnewitem.php" class="form-group">
+		<label for="name">Product Name</label>
+		<input type="text" name="name" id="name" placeholder="Enter product name" class="form-control" required>
 
-		<label for="password">Password</label>
-		<input type="password" name="password" id="password" placeholder="Enter password" class="form-control" required>
+		<label for="image">Image</label>
+		<input type="file" name="image" id="image" placeholder="Upload image" class="form-control" required>
 
-		<label for="confirmPassword">Confirm Password</label>
-		<input type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter password" class="form-control" disabled required>
+		<label for="price">Price</label>
+		<input type="text" name="price" id="price" placeholder="Enter price" class="form-control" required>
 
-		<label for="email">Email Address</label>
-		<input type="email" name="email" id="email" placeholder="email@domain.com" class="form-control" required>
+		<label for="email">Description</label>
+		<textarea style="resize:none;" placeholder="Type product description here" name="description" id="description" class="form-control" required></textarea>
 
-		<input type="submit" name="submit" id="submit" value="Register" class="btn btn-primary">
+		<label for="category">Category</label>
+		<select class="form-control" name="category">
+			<option value="Category 1">Category 1</option>
+			<option value="Category 2">Category 2</option>
+			<option value="Category 3">Category 3</option>
+			<option value="Category 4">Category 4</option>
+			<option value="Category 5">Category 5</option>
+			<option value="Category 6">Category 6</option>
+		</select>
+
+		<input type="submit" name="submit" id="submit" value="Create Item" class="btn btn-primary">
 	</form>
 
 	</main>
@@ -44,7 +56,7 @@ include 'partials/head.php';
 
 include 'partials/foot.php';
 ?>
-
+<!-- 
 	<script type="text/javascript">
 		$('#username').on('input', function(){
 			var usernameText = $(this).val();
@@ -89,7 +101,7 @@ include 'partials/foot.php';
 				});
 		});
 
-	</script>
+	</script> -->
 
 </body>
 </html>

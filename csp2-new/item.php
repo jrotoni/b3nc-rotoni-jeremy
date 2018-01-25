@@ -9,7 +9,7 @@ if (isset($_SESSION['current_user'])) {
 }
 
 function getTitle() {
-	echo 'User';
+	echo 'Item';
 }
 
 include 'partials/head.php';
@@ -25,13 +25,13 @@ include 'partials/head.php';
 	<!-- wrapper -->
 	<main class="wrapper">
 
-		<h1>User Page</h1>
+		<h1>Item Page</h1>
 
 		<?php
 
 		$id = $_GET['id'];
-		$file = file_get_contents('assets/users.json');
-		$users = json_decode($file, true);
+		$file = file_get_contents('assets/items.json');
+		$items = json_decode($file, true);
 
 		/*foreach ($users as $key => $user) {
 			if ($key==$id) {
@@ -44,24 +44,28 @@ include 'partials/head.php';
 
 		<table>
 			<tr>
-				<td>Username</td>
-				<td><?php echo $users[$id]['username']; ?></td>
+				<td>Product Name</td>
+				<td><?php echo $items[$id]['name']; ?></td>
 			</tr>
 			<tr>
-				<td>Password</td>
-				<td><?php echo $users[$id]['password']; ?></td>
+				<td>Image</td>
+				<td><img src="<?php echo $items[$id]['image']; ?>" alt="Image of Beer"></td>
 			</tr>
 			<tr>
-				<td>Email</td>
-				<td><?php echo $users[$id]['email']; ?></td>
+				<td>Price</td>
+				<td><?php echo $items[$id]['price']; ?></td>
 			</tr>
 			<tr>
-				<td>Role</td>
-				<td><?php echo $users[$id]['role']; ?></td>
+				<td>Description</td>
+				<td><?php echo $items[$id]['description']; ?></td>
+			</tr>			
+			<tr>
+				<td>Category</td>
+				<td><?php echo $items[$id]['category']; ?></td>
 			</tr>
 		</table>
 
-		<a href="settings.php"><button class="btn btn-default">Back</button></a>
+		<a href="catalog.php"><button class="btn btn-default">Back</button></a>
 		<button class="btn btn-primary">Edit</button>
 		<button class="btn btn-danger">Delete</button>
 	</main>

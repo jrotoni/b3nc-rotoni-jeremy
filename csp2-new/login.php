@@ -26,7 +26,7 @@ include 'partials/head.php';
 			<label for="password">Password</label>
 			<input type="password" name="password" id="password" placeholder="Enter password" class="form-control">
 
-			<input type="submit" name="submit" id="submit" value="Login" class="btn-primary">
+			<input type="submit" name="submit" id="submit" value="Login" class="btn btn-primary">
 		</form>
 
 	</main>
