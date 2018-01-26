@@ -6,21 +6,9 @@
         "role": "admin"
     },
     {
-        "username": "user1",
-        "password": "user1",
-        "email": "user1@facebook.com",
-        "role": "user"
-    },
-    {
         "username": "user2",
         "password": "user2",
         "email": "user2@gmail.com",
-        "role": "user"
-    },
-    {
-        "username": "user3",
-        "password": "user3",
-        "email": "user3@user.com",
         "role": "user"
     },
     {
