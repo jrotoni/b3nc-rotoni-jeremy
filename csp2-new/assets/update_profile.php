@@ -16,10 +16,13 @@ $users = json_decode($file, true);
 $users[$id]['username'] = $username;
 $users[$id]['password'] = $password;
 $users[$id]['email'] = $email;
-$users[$id]['role'] = $role;
+
+if ($image != null) {
+$users[$id]['image'] = 'assets/image/' . $image;
+}
 
 $jsonFile = fopen('users.json', 'w');
 fwrite($jsonFile, json_encode($users, JSON_PRETTY_PRINT));
 fclose($jsonFile);
 
-header("location: ../user.php?id=$id");
+header("location: ../profile.php");

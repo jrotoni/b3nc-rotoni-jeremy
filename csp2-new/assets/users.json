@@ -3,18 +3,21 @@
         "username": "admin",
         "password": "admin",
         "email": "admin@tuitt.com",
-        "role": "admin"
+        "role": "admin",
+        "image": "assets\/image\/cat.gif"
     },
     {
         "username": "user2",
         "password": "user2",
         "email": "user2@gmail.com",
-        "role": "user"
+        "role": "user",
+        "image": "https:\/\/lorempixel.com\/300\/300\/"
     },
     {
         "username": "user4",
         "password": "user4",
         "email": "user4@4.com",
-        "role": "user"
+        "role": "user",
+        "image": "assets\/image\/cat.gif"
     }
 ]

@@ -3,10 +3,10 @@
 session_start();
 
 if (isset($_SESSION['current_user'])) {
-	if ($_SESSION['role'] != 'admin') {
-		header('location: home.php');
-	}
-}
+	// if ($_SESSION['role'] != 'admin') {
+	// 	header('location: home.php');
+	// }
+} 
 
 function getTitle() {
 	echo 'Item';
@@ -41,7 +41,7 @@ include 'partials/head.php';
 		echo $user['username']; ?>*/
 
 		?>
-
+			
 		<table>
 			<tr>
 				<td>Product Name</td>
@@ -66,9 +66,76 @@ include 'partials/head.php';
 		</table>
 
 		<a href="catalog.php"><button class="btn btn-default">Back</button></a>
-		<button class="btn btn-primary">Edit</button>
-		<button class="btn btn-danger">Delete</button>
+
+		<?php
+		if (isset($_SESSION['current_user'])) {
+		if ($_SESSION['role'] == 'admin') {
+			echo '
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editItemModal" data-index="'.$id.'" id="editItem">Edit</button>
+
+			<button id="deleteItem" class="btn btn-danger" data-index="<?php echo $id; ?>" data-toggle="modal" data-target="#deleteItemModal">Delete</button>
+			';
+		} else {
+			echo '<button class="btn btn-primary">Add to Cart</button>';
+		}
+	} else {
+		echo '<button class="btn btn-primary">Add to Cart</button>';
+	}
+		?>
+
+
 	</main>
+
+	<!-- Edit Modal -->
+	<div id="editItemModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	  		
+	    <!-- Modal content-->
+	  	<form method="POST" action="assets/update_item.php">
+	  	<input hidden name="user_id" value="<?php echo $id; ?>">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Edit Item Details</h4>
+	      </div>
+	      <div id="editItemModalBody" class="modal-body">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="submit" class="btn btn-primary">Save</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+	      </div>
+	    </div>
+	  	</form>
+
+	  </div>
+	</div>
+
+	<!-- Edit Modal -->
+	<div id="deleteItemModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	  		
+	    <!-- Modal content-->
+	  	<form method="POST" action="assets/delete_item.php">
+	  	<input hidden name="user_id" value="<?php echo $id; ?>" style="display: none;">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Delete Item</h4>
+	      </div>
+	      <div id="deleteUserModalBody" class="modal-body">
+	      	<p>Do you really want to delete <?php echo $items[$id]['name']; ?>?</p>
+	      	<img src="<?php echo $items[$id]['image']; ?>" alt="Image of Beer">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="submit" class="btn btn-danger">Yes</button>
+	        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+	      </div>
+	    </div>
+	  	</form>
+
+	  </div>
+	</div>
+	
 
 	
 
@@ -79,6 +146,22 @@ include 'partials/head.php';
 
 include 'partials/foot.php';
 ?>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#editItem').on('click',function(){
+			var userID = $(this).data('index');
+			$.get('assets/edit_item.php',
+				{
+					id: userID
+				},
+				function(data, status) {
+					$('#editItemModalBody').html(data);
+					// console.log(data);
+				});
+		});
+		});
+</script>
 
 </body>
 </html>

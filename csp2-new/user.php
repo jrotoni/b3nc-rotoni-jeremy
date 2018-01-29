@@ -65,7 +65,6 @@ include 'partials/head.php';
 
 		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editUserModal" data-index="<?php echo $id; ?>" id="editUser">Edit</button>
 
-	<!-- 	<button class="btn btn-primary">Edit</button> -->
 		<button id="deleteUser" class="btn btn-danger" data-index="<?php echo $id; ?>" data-toggle="modal" data-target="#deleteUserModal">Delete</button>
 	</main>
 
@@ -141,20 +140,20 @@ include 'partials/foot.php';
 						// console.log(data);
 					});
 			});
-
-			// $('#deleteUser').on('click',function(){
-			// 	var userID = $(this).data('index');
-				
-			// 	$.get('assets/remove_user.php',
-			// 		{
-			// 			id: userID
-			// 		},
-			// 		function(data, status) {
-			// 			$('#editUserModalBody').html(data);
-			// 			// console.log(data);
-			// 		});
-			// });
 		});
+
+		// $('#deleteUser').on('click',function(){
+		// 	var userID = $(this).data('index');
+			
+		// 	$.get('assets/remove_user.php',
+		// 		{
+		// 			id: userID
+		// 		},
+		// 		function(data, status) {
+		// 			$('#editUserModalBody').html(data);
+		// 			// console.log(data);
+		// 		});
+		// });
 	</script>
 
 </body>

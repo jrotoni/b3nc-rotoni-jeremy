@@ -1,24 +1,17 @@
 [
     {
-        "name": "Cerveza Negra",
-        "description": "Cerveza Negra, a full-bodied dark lager with rich caramel tones made from roasted pilsen malt from Europe and other top quality ingredients. The right balance of bitterness and sweetness, and a creamy, frothy head entice drinkers to soak in its unique flavors...",
-        "image": "https:\/\/lorempixel.com\/300\/300\/",
-        "price": 200,
-        "category": "Category 1"
-    },
-    {
         "name": "San Mig Light",
         "description": "San Mig Light is the country's leading low calorie beer with only 100 calories per 330ml serving. That's why you'll feel so light as you enjoy its full beer flavor that hits just right...",
         "image": "https:\/\/lorempixel.com\/300\/300\/",
-        "price": 300.25,
+        "price": 101.5,
         "category": "Category 2"
     },
     {
-        "name": "Gold Eagle Beer",
-        "description": "The ultimate reward to a hard day's work is Gold Eagle Beer. It is moderately light bodied, yet flavorful, hopped just enough to give a little bite on the finish bringing out an over-all \"easy drinking\" character. Relax and enjoy the moment with this beer. Its alcohol content is 3.5% by weight and 4.55% by volume...",
-        "image": "https:\/\/lorempixel.com\/300\/300\/",
-        "price": 400.1,
-        "category": "Category 3"
+        "name": "BLACK Eagle Beer",
+        "description": "The ultimate reward to a hard day's work is Gold Eagle Beer. It is moderately light bodied, yet flavorful, hopped just enough to give a little bite on the finish bringing out an over-all ",
+        "image": "assets\/image\/cat.gif",
+        "price": 70,
+        "category": "Category 1"
     },
     {
         "name": "Brew Kettle",
@@ -31,7 +24,7 @@
         "name": "Fat Pauly's Ales & Lagers",
         "description": "Fat Pauly's Hand-crafted Ales & Lagers is a proud local brand that makes fresh home-brewed beers using both the finest imported brew grade malt and some local indegenous ingredients such as Timoga Spring waters, and wild Putyukan Honey...",
         "image": "https:\/\/lorempixel.com\/300\/300\/",
-        "price": 600.21,
+        "price": 999,
         "category": "Category 5"
     },
     {

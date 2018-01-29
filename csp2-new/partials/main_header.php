@@ -19,7 +19,7 @@
 
         if (isset($_SESSION['current_user'])) {
           echo '
-            <li><a href="settings.php">' . ucfirst($_SESSION['current_user']) . '</a></li>
+            <li><a href="profile.php">' . ucfirst($_SESSION['current_user']) . '</a></li>
           ';
         }
         ?>

@@ -31,7 +31,7 @@ include 'partials/head.php';
 		<label for="price">Price</label>
 		<input type="text" name="price" id="price" placeholder="Enter price" class="form-control" required>
 
-		<label for="email">Description</label>
+		<label for="description">Description</label>
 		<textarea style="resize:none;" placeholder="Type product description here" name="description" id="description" class="form-control" required></textarea>
 
 		<label for="category">Category</label>

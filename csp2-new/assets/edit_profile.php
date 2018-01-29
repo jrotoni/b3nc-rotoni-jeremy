@@ -15,10 +15,8 @@ echo '
 <div class="form-group">
 	<label>Username:</label> <input name="username" class="form-control" type="text" value="'.$users[$id]['username'].'"> <br>';
 
-	if ($_SESSION['role'] != 'admin'){
-		echo '
-		<label>Password:</label> <input name="password" class="form-control" type="password" value="'.$users[$id]['password'].'"> <br>';
-	}
+	echo '
+	<label>Password:</label> <input name="password" class="form-control" type="password" value="'.$users[$id]['password'].'"> <br>';
 	
 	echo '
 	<label>Email:</label> <input name="email" class="form-control" type="email" value="'.$users[$id]['email'].'"> <br>';
@@ -41,7 +39,7 @@ echo '
 	echo '
 	</select>
 	</div>';
-	} else {
-		echo '<label>Image:</label>
-		<input name="image" class="form-control" type="file" value"'.$users[$id]['image'].'">';
 	}
+
+	echo '<label>Image:</label>
+	<input name="image" class="form-control" type="file" value"'.$users[$id]['image'].'">';
