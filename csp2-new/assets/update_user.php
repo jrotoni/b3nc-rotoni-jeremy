@@ -14,7 +14,9 @@ $file = file_get_contents('users.json');
 $users = json_decode($file, true);
 
 $users[$id]['username'] = $username;
+if ($password != null) {
 $users[$id]['password'] = $password;
+}
 $users[$id]['email'] = $email;
 $users[$id]['role'] = $role;
 

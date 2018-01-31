@@ -8,10 +8,40 @@ function getTitle() {
 
 include 'partials/head.php';
 
+// import JSON file
 $file = file_get_contents('assets/items.json');
 $items = json_decode($file, true);
 
-// var_export($items);
+// retrieve all categories
+$categories = array_column($items, 'category');
+// var_export($categories);
+
+// Filter unique entry of category
+$categories = array_unique($categories);
+sort($categories);
+
+$result = array();
+
+if (isset($_GET['category']) && $_GET['category']!='All') {
+$cat = $_GET['category'];
+// echo $cat;
+
+// Filter items based on category chosen
+foreach ($items as $item) {
+	if ($item['category'] === $cat) {
+
+		array_push($result, $item);
+	}
+}
+
+
+} else {
+	// show all items
+
+	$result = $items;
+	// var_dump($result);
+}
+
 
 ?>
 
@@ -36,15 +66,34 @@ $items = json_decode($file, true);
 		  }
 		}
 		?>
-		
+
+		<form method="GET" id="myForm">	
+			<select class="form-control" name="category" onchange="myForm()">
+				<option>All</option>
+				<?php
+
+				foreach ($categories as $category) {
+					if ($category==$_GET['category']) {
+						echo '<option selected>'.$category.'</option>';
+					} else {
+					echo '<option>'.$category.'</option>';
+						
+					}
+				}
+
+				?>
+			</select>
+			
+			<!-- <button class="btn btn-primary" type="submit" name="search">Search</button> -->
+		</form>
 		
 		<div class="items-wrapper">
 			<?php
 
-			foreach ($items as $key => $item) {
+			foreach ($result as $key => $item) {
 				echo '
 				<div class="item-parent-container form-group">
-				<a href="item.php?id=' . $key . '" style="text-decoration: none;">
+				<a href="item.php?id=' . $item['id'] . '" style="text-decoration: none;">
 				<div class="item-container">
 				<h3>' . $item['name'] . '</h3>
 				<img src="'. $item['image'] .'" alt="">
@@ -52,7 +101,8 @@ $items = json_decode($file, true);
 				<p>'. $item['description'].'</p>
 				</div> <!-- /.item-container -->
 				</a>
-				<button class="btn btn-primary form-control">Add to Cart</button>
+				<input id="itemQuantity'.$item['id'].'" type="number">
+				<button class="btn btn-primary form-control" value="0" min="0" onclick="addToCart('.$item['id'].')">Add to Cart</button>
 
 				</div>
 			';
@@ -71,6 +121,34 @@ $items = json_decode($file, true);
 
 include 'partials/foot.php';
 ?>
+
+<script type="text/javascript">
+	function myForm(){
+		document.getElementById('myForm').submit();
+	}
+
+	function addToCart(itemID) {
+		// console.log(itemID);
+		var id = itemID;
+		var quantity = $('#itemQuantity' + id).val();
+		// console.log(quantity);
+
+		// create a post request to update session cart variable
+
+		$.post('assets/add_to_cart.php',
+		{
+
+			item_id: id,
+			item_quantity: quantity
+		},
+		function(data, status) {
+			// console.log(data);
+
+			$('a[href="cart.php"]').html(data);
+		}
+		);
+	}
+</script>
 
 </body>
 </html>

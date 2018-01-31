@@ -1,5 +1,9 @@
 body {
-	background-color: gold;
+	/*background-color: gold;*/
+	background-image: url("../image/beerbg.gif");
+/*	position: relative;
+	min-height: 100%;
+	margin: 0;*/
 }
 
 .navbar-inverse {
@@ -9,7 +13,7 @@ body {
 .wrapper {
 	width: 80vw;
 	min-height: 87vh;
-	background-color: white;
+	background-color: #ffffff45;
 	margin: 0 auto;
 }
 
@@ -50,10 +54,11 @@ td {
 	width: 30%;
 	display: inline-block;
 	margin: 10px;
+	border: 3px solid black;
 }
 
 .item-container {
-	background-color: lightgrey;
+	background-color: #ffffff75;
 	height: 500px;
 	width: 100%;
 	padding: 15px;
@@ -75,7 +80,11 @@ td {
 
 /* Main Footer */
 .main-footer {
+	/*position: absolute;*/
+	left: 0;
+	bottom: 0;
+	width: 100%;
 	background-color: grey;
-	padding: 15px;
+	padding: 18.5px;
 	text-align: center;
 }

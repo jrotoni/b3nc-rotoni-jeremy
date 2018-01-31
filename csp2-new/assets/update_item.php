@@ -18,9 +18,10 @@ $items[$id]['description'] = $description;
 
 if ($image != null) {
 $items[$id]['image'] = 'assets/image/' . $image;
-} else {
-$items[$id]['image'] = $image;	
-}
+} 
+// else {
+// $items[$id]['image'] = $image;	
+// }
 
 $items[$id]['price'] = $price;
 $items[$id]['category'] = $category;

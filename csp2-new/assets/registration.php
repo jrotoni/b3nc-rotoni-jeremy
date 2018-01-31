@@ -12,7 +12,8 @@ $users = json_decode($file, true);
 $newUser = array('username' => $userName, 
 				'password' => $passWord, 
 				'email' => $email, 
-				'role' => 'user');
+				'role' => 'user',
+				'image' => null);
 array_push($users, $newUser);
 
 $jsonFile = fopen('users.json', 'w');

@@ -15,6 +15,15 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
 
+        <li><a href="cart.php">My Cart 
+          <?php
+          if (isset($_SESSION['item_count'])) {
+            echo '
+            <strong style="color:red;">( '.$_SESSION['item_count'].' )</strong>
+            ';
+          }
+          ?>
+        </a></li>
         <?php
 
         if (isset($_SESSION['current_user'])) {
@@ -36,7 +45,6 @@
           if ($_SESSION['role'] == 'admin') {
             echo '<li><a href="settings.php">Settings</a></li>';
           }
-          echo '<li><a href="profile.php">Profile</a></li>';
           echo '<li><a href="logout.php">Logout</a></li>';     
         } else {
           echo '<li><a href="login.php">Login</a></li>';

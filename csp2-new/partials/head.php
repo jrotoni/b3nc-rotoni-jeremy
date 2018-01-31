@@ -10,5 +10,7 @@
 
 	<!-- import bootstrap -->
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<!-- import fontawesome -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- import cutom css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">

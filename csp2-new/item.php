@@ -65,7 +65,8 @@ include 'partials/head.php';
 			</tr>
 		</table>
 
-		<a href="catalog.php"><button class="btn btn-default">Back</button></a>
+<!-- 		<a href="<?php //echo $_SERVER['HTTP_REFERER']?>"><button class="btn btn-default">Back</button></a> -->
+		<button class="btn btn-default" onclick="javascript: history.go(-1)">Back</button>
 
 		<?php
 		if (isset($_SESSION['current_user'])) {
