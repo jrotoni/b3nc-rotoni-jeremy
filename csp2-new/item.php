@@ -33,35 +33,35 @@ include 'partials/head.php';
 		$file = file_get_contents('assets/items.json');
 		$items = json_decode($file, true);
 
-		/*foreach ($users as $key => $user) {
-			if ($key==$id) {
+		foreach ($items as $key => $item) {
+			if ($items[$key]['id']==$id) {
 				break;
 			}
-		} <?php 
-		echo $user['username']; ?>*/
+		} 
 
 		?>
+
 			
 		<table>
 			<tr>
 				<td>Product Name</td>
-				<td><?php echo $items[$id]['name']; ?></td>
+				<td><?php echo $item['name']; ?></td>
 			</tr>
 			<tr>
 				<td>Image</td>
-				<td><img src="<?php echo $items[$id]['image']; ?>" alt="Image of Beer"></td>
+				<td><img src="<?php echo $item['image']; ?>" alt="Image of Beer"></td>
 			</tr>
 			<tr>
 				<td>Price</td>
-				<td><?php echo $items[$id]['price']; ?></td>
+				<td><?php echo $item['price']; ?></td>
 			</tr>
 			<tr>
 				<td>Description</td>
-				<td><?php echo $items[$id]['description']; ?></td>
+				<td><?php echo $item['description']; ?></td>
 			</tr>			
 			<tr>
 				<td>Category</td>
-				<td><?php echo $items[$id]['category']; ?></td>
+				<td><?php echo $item['category']; ?></td>
 			</tr>
 		</table>
 
