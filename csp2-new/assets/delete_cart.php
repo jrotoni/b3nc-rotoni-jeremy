@@ -3,6 +3,7 @@
 session_start();
 
 $id = $_POST['item_id'];
+
 //$deleteCart = $_SESSION['cart'];
 //$quantity = $_POST['item_quantity'];
 
@@ -18,10 +19,17 @@ $id = $_POST['item_id'];
 //echo 'The ID is = ' .$id.' ';
 
 unset($_SESSION['cart'][$id]);
+//unset($_SESSION['cartID'][$count]);
 $_SESSION['item_count'] = array_sum($_SESSION['cart']);
 
 // array_splice($_SESSION['cart'], $id, 1);
 
-//var_dump($_SESSION['cart']);
-echo 'My Cart <strong style="color:red;">( '.$_SESSION['item_count'].' )</strong>';
+$itemNumber = count($_SESSION['cart']);
+$updateCart = 'My Cart <strong style="color:red;">( '.$_SESSION['item_count'].' )</strong>';
+//$cartID = $_SESSION['cartID'];
+
+//$returnData = array($itemNumber, $updateCart);
+//echo json_encode($returnData);
+
+echo json_encode(array($itemNumber, $updateCart));
 

@@ -72,9 +72,9 @@ include 'partials/head.php';
 		if (isset($_SESSION['current_user'])) {
 		if ($_SESSION['role'] == 'admin') {
 			echo '
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editItemModal" data-index="'.$id.'" id="editItem">Edit</button>
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editItemModal" data-index="'.$item['id'].'" id="editItem">Edit</button>
 
-			<button id="deleteItem" class="btn btn-danger" data-index="<?php echo $id; ?>" data-toggle="modal" data-target="#deleteItemModal">Delete</button>
+			<button id="deleteItem" class="btn btn-danger" data-index="'.$item['id'].'" data-toggle="modal" data-target="#deleteItemModal">Delete</button>
 			';
 		} else {
 			echo '<button class="btn btn-primary">Add to Cart</button>';
@@ -93,7 +93,7 @@ include 'partials/head.php';
 	  		
 	    <!-- Modal content-->
 	  	<form method="POST" action="assets/update_item.php">
-	  	<input hidden name="user_id" value="<?php echo $id; ?>">
+	  	<input hidden name="user_id" value="<?php echo $item['id']; ?>">
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -111,21 +111,21 @@ include 'partials/head.php';
 	  </div>
 	</div>
 
-	<!-- Edit Modal -->
+	<!-- Delete Modal -->
 	<div id="deleteItemModal" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
 	  		
 	    <!-- Modal content-->
 	  	<form method="POST" action="assets/delete_item.php">
-	  	<input hidden name="user_id" value="<?php echo $id; ?>" style="display: none;">
+	  	<input hidden name="user_id" value="<?php echo $item['id']; ?>" style="display: none;">
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
 	        <h4 class="modal-title">Delete Item</h4>
 	      </div>
 	      <div id="deleteUserModalBody" class="modal-body">
-	      	<p>Do you really want to delete <?php echo $items[$id]['name']; ?>?</p>
-	      	<img src="<?php echo $items[$id]['image']; ?>" alt="Image of Beer">
+	      	<p>Do you really want to delete <?php echo $item['name']; ?>?</p>
+	      	<img src="<?php echo $item['image']; ?>" alt="Image of Beer">
 	      </div>
 	      <div class="modal-footer">
 	        <button type="submit" class="btn btn-danger">Yes</button>

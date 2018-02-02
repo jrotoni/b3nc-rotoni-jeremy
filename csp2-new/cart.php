@@ -43,15 +43,17 @@ $items = json_decode($file, true);
 	$counter = 0;
 	$totalAmount = 0;
 
+	//var_dump(array_unique($_SESSION['cartID']));
+
 	if( $carts == null) {
-		echo'	
-		<h3>Your cart is empty</h3>';
+		echo '	
+		<h3>Your cart is empty!</h3> 
+		';
 	} else {
 
 		echo '
 		<table style="text-align: center;">
 		<thead>
-		<th>Number</th>
 		<th>Image</th>
 		<th>Product Name</th>
 		<th>Price</th>
@@ -69,14 +71,15 @@ $items = json_decode($file, true);
 
 			foreach ($items as $key => $item) {
 				if ($items[$key]['id']==$id) {
+					$computedSubtotal = number_format($items[$key]['price'] * $cartQuantity);
+					//$_SESSION['cartID'][$counter] = $id;
 					echo '
 								<tr id="item'.$id.'">
-									<td>'.$counter.'</td>
 									<td><img src="'.$items[$key]['image'].'"></td>
 									<td>'.$items[$key]['name'].'</td>
-									<td>PHP '.number_format($items[$key]['price']).'</td>
+									<td>PHP <span id="itemPrice'.$id.'">'.number_format($items[$key]['price']).'</span></td>
 									<td><input type="number" value="'.$cartQuantity.'" oninput="updateSubtotal('.$id.',this.value)"></td>
-									<td class="subtotal" id="price'.$id.'">PHP '.number_format($items[$key]['price'] * $cartQuantity).'</td>
+									<td>PHP <span class="subtotal" id="price'.$id.'">'.$computedSubtotal.'</span></td>
 									<td><button style="width: 50px; height: 50px;" onclick="deleteCart('.$id.')"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
 								<tr>
 								';
@@ -84,7 +87,8 @@ $items = json_decode($file, true);
 								$totalAmount = $totalAmount + $items[$key]['price'] * $cartQuantity;
 					break;
 				}
-			} 
+			}
+
 
 		} 
 
@@ -110,26 +114,41 @@ include 'partials/foot.php';
 
 <script type="text/javascript">
 	function deleteCart(deleteItem) {
-		//console.log(deleteItem);
+		//alert(deleteItem);
 		var id = deleteItem;
+
 		$('#item'+ id).remove();
 		
-		$.post('assets/delete_cart.php',
-		{
+		// $.post('assets/delete_cart.php',
+		// {
 
-			item_id: id,
-			//item_quantity: quantity
-		},
-		function(data, status) {
-			//console.log(data);
+		// 	item_id: id,
+		// },
+		// function(data, status) {
+		// 	alert(data);
+		// }
+		// );
 
-			//$('#tableID').html(data);
-			$('a[href="cart.php"]').html(data);
-		}
+		$.ajax({
+		    type: "POST",
+		    url: 'assets/delete_cart.php',
+		    dataType: "json",
+		    data: { item_id: id},
+		    success: function(data) {
+		        // console.log(data);
+		        // alert(data[0]);
 
+		    $('a[href="cart.php"]').html(data[1]);
+		    
+	    	// console.log(data);
+		    // for (x=1; x<=data[0]; x++) {
+		    // 	//$('.counterClass').html(x);
+		    // }
+		    }
+		});
 
-		);
 		compute();
+		//$("#counterID").load(window.location.href + " #counterID" );
 	}
 
 	function compute() {
@@ -139,27 +158,41 @@ include 'partials/foot.php';
 		var price = '';
 		for (x=0; x<count; x++){
 			price = subtotalAmount[x].innerHTML;
-			price = price.split("PHP ");
-			price = price[1];
-			price = price.replace(",", "");
+			//price = price.replace(",", "");
+			price = price.replace(/,/g , "");
 			price = parseInt(price);
 			totalAmount += price;
 		}
-		//console.log(count);
-
 
 		$('#computeAmount').html("Total Amount: PHP " + totalAmount.toLocaleString());
 		if(totalAmount == 0) {
-			location.reload();
+			$( "#tableID" ).load(window.location.href + " #tableID" );
 		}
 	}
 
 	function updateSubtotal(changeSubtotal, valueQuantity) {
 		var id = changeSubtotal;
-		//var valueQuantity = $(this).val();
-		//alert(valueQuantity);
-		$('#price'+ id).html("PHP " + valueQuantity);
+		var itemQuantity = valueQuantity;
+		var amount = $('#itemPrice' + id).html();
+		amount = amount.replace(",", "");
+		$('#price'+ id).html((valueQuantity*amount).toLocaleString());
+
+		$.post('assets/update_cart.php',
+		{
+
+			item_id: id,
+			item_quantity: itemQuantity
+		},
+		function(data, status) {
+			//console.log(data);
+
+			$('a[href="cart.php"]').html(data);
+		}
+		);
+
+		compute();
 	}
+
 </script>
 
 </body>

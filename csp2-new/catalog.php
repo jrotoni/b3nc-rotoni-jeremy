@@ -97,7 +97,7 @@ foreach ($items as $item) {
 				<div class="item-container">
 				<h3>' . $item['name'] . '</h3>
 				<img src="'. $item['image'] .'" alt="">
-				<p>PHP '. $item['price'] .'</p>
+				<p>PHP '. number_format($item['price']) .'</p>
 				<p>'. $item['description'].'</p>
 				</div> <!-- /.item-container -->
 				</a>

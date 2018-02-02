@@ -26,10 +26,10 @@ include 'partials/head.php';
 		<input type="text" name="name" id="name" placeholder="Enter product name" class="form-control" required>
 
 		<label for="image">Image</label>
-		<input type="file" name="image" id="image" placeholder="Upload image" class="form-control" required>
+		<input type="file" name="image" id="image" placeholder="Upload image" class="form-control">
 
 		<label for="price">Price</label>
-		<input type="text" name="price" id="price" placeholder="Enter price" class="form-control" required>
+		<input type="number" name="price" id="price" placeholder="Enter price" class="form-control" required>
 
 		<label for="description">Description</label>
 		<textarea style="resize:none;" placeholder="Type product description here" name="description" id="description" class="form-control" required></textarea>

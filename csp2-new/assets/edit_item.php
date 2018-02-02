@@ -7,6 +7,13 @@ $id = $_GET['id'];
 $file = file_get_contents('items.json');
 $items = json_decode($file, true);
 
+foreach ($items as $key => $item) {
+	if ($items[$key]['id']==$id) {
+		$id = $key;
+		break;
+	}
+}
+
 //echo $items[$id]['name'] . '<br>' . $items[$id]['description'] . '<br>' . $items[$id]['image'] . '<br>' . $items[$id]['price'] . '<br>' . $items[$id]['category'];
 
 echo '

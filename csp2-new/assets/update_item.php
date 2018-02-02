@@ -13,6 +13,14 @@ $category = $_POST['category'];
 $file = file_get_contents('items.json');
 $items = json_decode($file, true);
 
+foreach ($items as $key => $item) {
+	if ($items[$key]['id']==$id) {
+		$id = $key;
+		$locationID = $items[$key]['id'];
+		break;
+	}
+}
+
 $items[$id]['name'] = $name;
 $items[$id]['description'] = $description;
 
@@ -30,4 +38,4 @@ $jsonFile = fopen('items.json', 'w');
 fwrite($jsonFile, json_encode($items, JSON_PRETTY_PRINT));
 fclose($jsonFile);
 
-header("location: ../item.php?id=$id");
+header("location: ../item.php?id=$locationID");

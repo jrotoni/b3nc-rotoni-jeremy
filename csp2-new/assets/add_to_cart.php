@@ -4,6 +4,7 @@ session_start();
 
 $id = $_POST['item_id'];
 $quantity = $_POST['item_quantity'];
+//$_SESSION['counterItem'] = $_SESSION['counterItem'] + 1;
 
 // echo $id. ' '.$quantity;
 
@@ -11,6 +12,7 @@ $quantity = $_POST['item_quantity'];
 
 $_SESSION['cart'][$id] = $quantity;
 // $_SESSION['item_count'] = $_SESSION['item_count'] + $quantity;
+//$_SESSION['cartID'][$id][$_SESSION['counterItem']] = $id;
 
 $_SESSION['item_count'] = array_sum($_SESSION['cart']);
 

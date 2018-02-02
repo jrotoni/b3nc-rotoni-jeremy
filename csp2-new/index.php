@@ -18,6 +18,8 @@ $_SESSION['cart'] = array();
 // create session variable for item counter
 $_SESSION['item_count'] = 0;
 
+// $_SESSION['cartID'] = array();
+// $_SESSION['counterItem'] = 0;
 ?>
 
 </head>

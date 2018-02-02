@@ -4,6 +4,8 @@ body {
 /*	position: relative;
 	min-height: 100%;
 	margin: 0;*/
+	position: relative;
+	min-height: 100%;
 }
 
 .navbar-inverse {
@@ -12,7 +14,7 @@ body {
 
 .wrapper {
 	width: 80vw;
-	min-height: 87vh;
+	min-height: 84.3vh;
 	background-color: #ffffff45;
 	margin: 0 auto;
 }
@@ -85,6 +87,6 @@ td {
 	bottom: 0;
 	width: 100%;
 	background-color: grey;
-	padding: 18.5px;
+	padding: 18px;
 	text-align: center;
 }
