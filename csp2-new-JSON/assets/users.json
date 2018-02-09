@@ -1,0 +1,44 @@
+[
+    {
+        "username": "admin",
+        "password": "admin",
+        "email": "admin@tuitt.com",
+        "role": "admin",
+        "image": "assets\/image\/cat.gif"
+    },
+    {
+        "username": "user2",
+        "password": "user2",
+        "email": "user2@gmail.com",
+        "role": "user",
+        "image": "https:\/\/lorempixel.com\/300\/300\/"
+    },
+    {
+        "username": "user4",
+        "password": "user4",
+        "email": "user4@gmail.com",
+        "role": "user",
+        "image": "assets\/image\/cat.gif"
+    },
+    {
+        "username": "maymi",
+        "password": "pugi",
+        "email": "maymi@pugi.com",
+        "role": "admin",
+        "image": "assets\/image\/cat.gif"
+    },
+    {
+        "username": "user1",
+        "password": "user1",
+        "email": "user1@gmail.com",
+        "role": "user",
+        "image": "assets\/image\/cat.gif"
+    },
+    {
+        "username": "monday",
+        "password": "ganda",
+        "email": "monday@gmail.com",
+        "role": "user",
+        "image": "assets\/image\/1_hrFhKc1lS4vj63nGdxgezg.png"
+    }
+]

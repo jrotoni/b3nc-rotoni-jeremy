@@ -1,0 +1,3 @@
+$('#username').keypress(function() {
+	
+});

@@ -1,0 +1,2 @@
+export: mysqldump -h localhost -u root database_name > file.sql
+import: mysql -h localhost -u root database_nmae < file.sql
