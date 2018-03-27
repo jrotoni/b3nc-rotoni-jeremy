@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -41,7 +42,7 @@
         <div class="alert alert-success">
         {{Session::get('create_article_success')}}
         </div>
-    @endif
+    @endif                
     
     @if(count($errors)>0)
     <div class="alert alert-danger">
@@ -74,7 +75,7 @@
                             <!-- Add Task Button -->
                             <div class="form-group">
                                 <div class="col-sm-offset-3 col-sm-6">
-                                    <button type="submit" class="btn btn-default">
+                                    <button type="submit" class="btn btn-success">
                                         <i class="fa fa-btn fa-plus"></i>Add Task
                                     </button>
                                 </div>
@@ -99,7 +100,7 @@
                                 <tbody>
                                     @foreach ($tasks as $task)
                                         <tr>
-                                        <td class="table-text"><div>{{$task->name}}</div></td>
+                                        <td class="table-text"><div><strong>{{ucfirst($task->name)}}</strong> <small>created: {{$task->created_at->diffForHumans()}}</small></div></td>
 
                                             <!-- Task Delete Button -->
                                             <td>

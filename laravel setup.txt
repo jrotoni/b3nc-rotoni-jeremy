@@ -1,0 +1,16 @@
+1. web.php (routes)
+2. edit env file and create database thru phpmyadmin
+3. create table thru php artisan make:migration <migration_file> --create=<tablename>
+4. go to appserviceprovider.php {
+use Schema;
+Schema::defaultStringLength(191);
+}
+5. php artisan migrate
+6. php artisan make:model <Table>
+
+1.
+2.
+3. php artisan make:model Task -m-c
+4.
+5.
+skip number 6
